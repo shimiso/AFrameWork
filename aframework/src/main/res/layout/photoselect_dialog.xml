@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_camera_photo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:minHeight="45.0dip"
+            android:text="拍照"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_local_photo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:minHeight="45.0dip"
+            android:textColor="@color/black"
+            android:text="从相册选择照片" 
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1.0px"
+            android:background="#ffc9cacb" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#0000" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:minHeight="45.0dip"
+            android:textColor="@color/black"
+            android:text="取消" 
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1.0px"
+            android:background="#ffc9cacb" />
+    </LinearLayout>
+
+</RelativeLayout>

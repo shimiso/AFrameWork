@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarStyle"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <!--tabIndicatorColor  设置导航底部的指示颜色为透明，即去掉底部的矩形指示器，当然设置成其他颜色那么底部就会有相应颜色的矩形指示器-->
+            <!--可以看到TabLayout使用和其他控件一样，要注意的是添加命名空间，和设置tabMode属性为可以滚动-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabMode="scrollable"
+                app:tabMinWidth="10dp"
+                android:fillViewport="false" />
+
+            <ImageView
+                android:id="@+id/iv_edit_column"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:src="@drawable/channel_edit_bg"
+                android:visibility="visible" />
+        </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

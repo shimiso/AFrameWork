@@ -1,0 +1,1 @@
+include ':aframework', ':umeng_social_sdk'

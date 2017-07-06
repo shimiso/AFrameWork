@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/book_xlist_sample"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/xlist_sample" />
+        <item
+            android:id="@+id/media_player_sample"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/media_player_sample" />
+        <item
+            android:id="@+id/file_download_sample"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/file_download_sample" />
+        <item
+            android:id="@+id/save_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/save_sample" />
+        <item
+            android:id="@+id/jpush_sample"
+            android:icon="@drawable/ic_menu_send"
+            android:title="@string/jpush_sample" />
+        <item
+            android:id="@+id/share_sample"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/share_sample" />
+        <item
+            android:id="@+id/share_auth_sample"
+            android:icon="@drawable/ic_menu_auth"
+            android:title="@string/share_auth_sample" />
+        <item
+            android:id="@+id/bottom_tab_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/bottom_tab_sample" />
+        <item
+            android:id="@+id/swiperefresh_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/swiperefresh_sample" />
+        <item
+            android:id="@+id/image_detail_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/image_detail_sample" />
+        <item
+            android:id="@+id/coordinator_layout_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/coordinator_layout_sample" />
+        <item
+            android:id="@+id/ndk_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/ndk_sample" />
+        <item
+            android:id="@+id/anim_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/anim_sample" />
+        <item
+            android:id="@+id/property_anim_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/property_anim_sample" />
+        <item
+            android:id="@+id/recorder_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/recorder_sample" />
+        <item
+            android:id="@+id/customerview_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/customerview_sample" />
+        <item
+            android:id="@+id/rx_android_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/rx_android_sample" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,114 @@
+<!--CoordinatorLayout: 协调子View之间动作的一个父View,通过Behavior来给子view实现交互的-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--AppBarLayout:它可以让你定制当某个可滚动View的滚动手势发生变化时，其内部的子View实现何种动作
+    内部的子View通过在布局中加app:layout_scrollFlags设置执行的动作。而layout_srcollFlags的动作主要如下：
+     1.scroll:值设为scroll的View会跟随滚动事件一起发生移动。
+     2.enterAlways:值设为enterAlways的View,当ScrollView往下滚动时，该View会直接往下滚动。而不用考虑ScrollView是否在滚动。
+     3.exitUntilCollapsed：值设为exitUntilCollapsed的View，当这个View要往上逐渐“消逝”时，会一直往上滑动，直到剩下的的高度达到它的最小高度后，再响应ScrollView的内部滑动事件。
+     4.enterAlwaysCollapsed：是enterAlways的附加选项，一般跟enterAlways一起使用，它是指，View在往下“出现”的时候，首先是enterAlways效果，当View的高度达到最小高度时，View就暂时不去往下滚动，直到ScrollView滑动到顶部不再滑动时，View再继续往下滑动，直到滑到View的顶部结束。
+     5.snap:子View不会存在局部显示的情况，滚动Child View的部分高度，当我们松开手指时，Child View要么向上全部滚出屏幕，要么向下全部滚进屏幕。-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <!--CollapsingToolbarLayout是用来对Toolbar进行再次包装的ViewGroup，主要是用于实现折叠的App Bar效果。
+
+        layout_collapseMode(折叠模式)有两个值:
+         1.parallax 子View可以选择在当前的布局当时是否以“视差”的方式来跟随滚动
+         2.pin Toolbar固定位置而不受移动的影响
+
+        layout_collapseParallaxMultiplier(视差因子) - 设置视差滚动因子，值为：0~1。
+
+        如果你想要在展开状态改变标题文字的位置，你可以这样做：通过应用的 margin 的4个属性，
+        就是：app:expandedTitleMargin, app:expandedTitleMarginBottom, app:expandedTitleMarginEnd 以及 app:expandedTitleMarginStart
+
+        如果你想要在折叠和展开状态时改变文本的显示。你可以这样来简单的实现：设置 TextAppearance，
+        分别通过 app:collapsedTitleTextAppearance 和app:expandedTitleTextAppearance 来设置
+
+        使用Toolbar的自定义布局时app:contentInsetLeft="0dp" app:contentInsetStart="0dp"可以去掉Toolbar左侧的距离-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:title=" ">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/ToolbarStyle"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <include
+                    android:id="@+id/toolbar1"
+                    layout="@layout/coordinator_layout_toolbar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <include
+                    android:id="@+id/toolbar2"
+                    layout="@layout/coordinator_layout_toolbar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+            </android.support.v7.widget.Toolbar>
+
+            <include
+                layout="@layout/coordinator_layout_head1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="110dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.8" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"就是这句和CoordinatorLayout控件互动实现滑动，
+    总结就是CoordinatorLayout控件和app:layout_behavior来进行互动，进而CoordinatorLayout的子控件和app:layout_behavior互动。
+    当然@string/appbar_scrolling_view_behavior是系统自带的，本质是一个类，我们也可以自定义这个类实现其他效果，-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <!--底部操作栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_behavior="com.eshangke.framework.widget.FooterBehavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:text="添加你的评论"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

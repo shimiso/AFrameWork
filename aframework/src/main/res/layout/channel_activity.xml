@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarStyle"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/channel_explain"
+        android:textColor="@color/black"
+        android:textSize="@dimen/big_small"/>
+
+    <TextView
+        style="@style/news_channel_sort_title"
+        android:text="@string/my_channel"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/news_channel_mine_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        style="@style/news_channel_sort_title"
+        android:text="@string/more_channel"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/news_channel_more_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

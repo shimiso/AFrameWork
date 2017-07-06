@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.eshangke.framework.ui.activities.event.TouchEventFather xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/father"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/ToolbarStyle"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="JNI和事件传递例子"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.eshangke.framework.ui.activities.event.TouchEventChilds
+        android:id="@+id/childs"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="#E1110D"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:text="你好">
+
+        <com.eshangke.framework.ui.activities.event.RTButton
+            android:id="@+id/jni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:onClick="onClick"
+            android:text="JNI测试" />
+    </com.eshangke.framework.ui.activities.event.TouchEventChilds>
+
+
+</com.eshangke.framework.ui.activities.event.TouchEventFather>
+

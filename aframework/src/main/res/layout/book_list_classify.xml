@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:fitsSystemWindows="true">
+
+    <com.eshangke.framework.widget.WrapListView
+        android:id="@+id/book_list_classify_one"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="wrap_content" />
+
+    <com.eshangke.framework.widget.WrapListView
+        android:id="@+id/book_list_classify_two"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
