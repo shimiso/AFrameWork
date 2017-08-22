@@ -12,9 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2ab0a4-4498-405f-a4a4-f68f404ad280" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/ui/activities/MainActivity.java" afterPath="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/ui/activities/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aframework/src/main/res/menu/main_drawer.xml" afterPath="$PROJECT_DIR$/aframework/src/main/res/menu/main_drawer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" />
     </list>
     <ignored path="FrameWork.iws" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -56,39 +53,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/ui/activities/MainActivity.java">
+      <file leaf-file-name="CarHomePullToRefreshActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/CarHomePullToRefreshActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="143" column="44" selection-start-line="143" selection-start-column="44" selection-end-line="143" selection-end-column="44" />
+            <state relative-caret-position="171">
+              <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_drawer.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/aframework/src/main/res/menu/main_drawer.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
-              <folding>
-                <element signature="e#1132#1162#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aframework/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="109" column="38" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -5312,13 +5284,13 @@
         <option value="$PROJECT_DIR$/pulltorefresh/build/intermediates/res/merged/debug/layout/autohome_header_loadinglayout.xml" />
         <option value="$PROJECT_DIR$/pulltorefresh/build/intermediates/bundles/default/res/layout/autohome_header_loadinglayout.xml" />
         <option value="$PROJECT_DIR$/aframework/build/intermediates/res/merged/debug/layout/autohome_header_loadinglayout.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/CarHomePullToRefreshActivity.java" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/loadinglayout/AutoHomeHeaderLayout.java" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/PullToRefreshLauncherActivity.java" />
         <option value="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/ui/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/aframework/src/main/res/menu/main_drawer.xml" />
         <option value="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/CarHomePullToRefreshActivity.java" />
       </list>
     </option>
   </component>
@@ -5339,7 +5311,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -5361,44 +5333,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".gradle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -5417,16 +5351,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="AFrameWork" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aframework" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -5869,7 +5793,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503383898059</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="新增刷新控件和相关demo">
+      <created>1503384125292</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1503384125292</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -6312,27 +6243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/CarHomePullToRefreshActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1914">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pulltorefresh/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pulltorefresh/src/main/assets/ptr_webview2_sample.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -6375,14 +6285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aframework/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="109" column="38" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aframework/src/main/res/values/drawables.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -6393,8 +6295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aframework/src/main/res/menu/main_drawer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        <state relative-caret-position="-958">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
           <folding>
             <element signature="e#1132#1162#0" expanded="true" />
           </folding>
@@ -6402,6 +6304,35 @@
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframework/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="109" column="38" selection-start-line="109" selection-start-column="18" selection-end-line="109" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pulltorefresh/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/CarHomePullToRefreshActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
