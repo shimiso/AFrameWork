@@ -141,7 +141,7 @@ public class MainActivity extends BaseActivity {
                     intent = new Intent(context, PhotoDetailActivity.class);
                     intent.putExtra("IMAGE_URL", "http://res.eshangke.com/newsphoto/2016/01/27/1453878920.jpg");
                     break;
-                case R.id.share_sample://友盟分享例子
+                case R.id.pulltorefresh_sample://PullToRefresh例子
                     intent = new Intent(context, PullToRefreshLauncherActivity.class);
                     break;
                 case R.id.bottom_tab_sample:// BottomTab切换例子
