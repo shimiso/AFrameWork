@@ -28,7 +28,9 @@ import com.eshangke.framework.ui.fragment.BooksListFragment;
 import com.eshangke.framework.util.RxBus;
 import com.eshangke.framework.widget.PhotoDetailActivity;
 import com.eshangke.framework.widget.photoselect.PhotoSelectDialog;
+import com.handmark.pulltorefresh.samples.PullToRefreshLauncherActivity;
 import com.umeng.analytics.MobclickAgent;
+
 
 import java.io.File;
 import java.util.ArrayList;
@@ -140,10 +142,7 @@ public class MainActivity extends BaseActivity {
                     intent.putExtra("IMAGE_URL", "http://res.eshangke.com/newsphoto/2016/01/27/1453878920.jpg");
                     break;
                 case R.id.share_sample://友盟分享例子
-                    intent = new Intent(context, UmengShareActivity.class);
-                    break;
-                case R.id.share_auth_sample://友盟社会化授权例子
-                    intent = new Intent(context, UmengAuthActivity.class);
+                    intent = new Intent(context, PullToRefreshLauncherActivity.class);
                     break;
                 case R.id.bottom_tab_sample:// BottomTab切换例子
                     intent = new Intent(context, BottomTabActivity.class);
@@ -286,10 +285,6 @@ public class MainActivity extends BaseActivity {
         if (id == R.id.action_settings) {
             //友盟事件统计
             MobclickAgent.onEvent(context, "action_settings");
-            return true;
-        } else if (id == R.id.action_share) {
-            Intent intent = new Intent(this, UmengShareActivity.class);
-            startActivity(intent);
             return true;
         }
 

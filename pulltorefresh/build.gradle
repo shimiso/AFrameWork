@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    //Android-PullToRefresh.
+    compile 'com.kevin:pulltorefresh:1.0.9'
+    //WrapRecyclerView 是一个可以添加头部和尾部的RecyclerView，并且提供了一个 WrapAdapter, 它可以让你轻松为 RecyclerView 添加头部和尾部。
+    compile 'com.kevin:wraprecyclerview:1.0.6'
+    //自定义无限轮转控件
+    compile 'com.kevin:loopview:1.0.4'
+}

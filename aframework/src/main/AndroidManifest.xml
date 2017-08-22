@@ -128,18 +128,6 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged|adjustPan" />
         <activity
-            android:name=".ui.activities.UmengShareActivity"
-            android:label="@string/umeng_share_sample"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <activity
-            android:name=".ui.activities.UmengAuthActivity"
-            android:label="@string/share_auth_sample"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateUnchanged|adjustPan" />
-        <activity
             android:name=".ui.activities.HttpSampleActivity"
             android:label="@string/file_download_sample"
             android:launchMode="singleTop"
@@ -208,29 +196,7 @@
 
         <!-- 安装包下载服务 -->
         <service android:name=".service.ApkDownloadService" />
-        <!-- 友盟社会化分享编辑页 -->
-        <activity
-            android:name="com.umeng.socialize.editorpage.ShareActivity"
-            android:excludeFromRecents="true"
-            android:theme="@style/Theme.UMDefault" />
-        <!-- 友盟社会化分享:QQ -->
-        <activity
-            android:name="com.tencent.tauth.AuthActivity"
-            android:launchMode="singleTask"
-            android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="tencent100424468" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.tencent.connect.common.AssistActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- Rich push 核心功能 since 2.0.6 -->
         <activity
