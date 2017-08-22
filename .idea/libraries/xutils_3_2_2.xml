@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="xutils-3.2.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/14d671f6a0c4c842e12bb609a214516c2d457e21/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/14d671f6a0c4c842e12bb609a214516c2d457e21/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xutils/xutils/3.2.2/bf91c4c37ccc3d54dc268ad8b1ffba1de98831e3/xutils-3.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

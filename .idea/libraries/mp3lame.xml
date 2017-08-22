@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mp3lame">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/aframework/libs/mp3lame.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

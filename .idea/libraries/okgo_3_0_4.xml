@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="okgo-3.0.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/c1b1017bdfcaae3f52ffc1997bd1dee37feaa81d/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/c1b1017bdfcaae3f52ffc1997bd1dee37feaa81d/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
