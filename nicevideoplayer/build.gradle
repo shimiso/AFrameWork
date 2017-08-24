@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    testCompile 'junit:junit:4.12'
+    //图片缓存和加载
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    //required, enough for most devices.
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.2'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.2'
+    //Other ABIs: optional
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.2'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.2'
+}

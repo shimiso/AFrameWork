@@ -29,6 +29,7 @@ import com.eshangke.framework.util.RxBus;
 import com.eshangke.framework.widget.PhotoDetailActivity;
 import com.eshangke.framework.widget.photoselect.PhotoSelectDialog;
 import com.handmark.pulltorefresh.samples.PullToRefreshLauncherActivity;
+import com.shims.nicevideoplayer.TinyWindowPlayActivity;
 import com.umeng.analytics.MobclickAgent;
 
 
@@ -122,8 +123,8 @@ public class MainActivity extends BaseActivity {
                     intent = new Intent(context, BooksXListActivity.class);//暂时不进入指导页面
                     break;
                 case R.id.media_player_sample://视频播放
-                    intent = new Intent(context, MediaPlayerActivity.class);
-
+//                    intent = new Intent(context, MediaPlayerActivity.class);
+                    intent = new Intent(context, TinyWindowPlayActivity.class);
                     break;
                 case R.id.file_download_sample://文件下载
                     intent = new Intent(context, HttpSampleActivity.class);

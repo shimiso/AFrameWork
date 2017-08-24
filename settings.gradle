@@ -1,1 +1,1 @@
-include ':aframework', ':pulltorefresh'
+include ':aframework', ':pulltorefresh', ':nicevideoplayer'

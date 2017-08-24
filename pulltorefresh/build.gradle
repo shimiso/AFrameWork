@@ -10,10 +10,17 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
         }
     }
 }
@@ -28,4 +35,5 @@ dependencies {
     compile 'com.kevin:wraprecyclerview:1.0.6'
     //自定义无限轮转控件
     compile 'com.kevin:loopview:1.0.4'
+    compile 'com.nineoldandroids:library:2.4.0'
 }

@@ -5,6 +5,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.support.multidex.MultiDex;
+import android.support.multidex.MultiDexApplication;
 
 import org.xutils.x;
 
@@ -14,7 +16,7 @@ import java.util.List;
 /**
  * Created by shims on 2016/1/20 0020.
  */
-public class MainApplication extends Application {
+public class MainApplication extends MultiDexApplication {
     private static MainApplication mainApplication = null;
     public List<Activity> activityList = new LinkedList<Activity>();
     private static Context sAppContext;
@@ -25,21 +27,23 @@ public class MainApplication extends Application {
         x.Ext.init(this);// 初始化 xutils
         mainApplication = this;
         sAppContext = this;
-        /*JPushInterface.setDebugMode(true);    // 设置开启日志,发布时请关闭日志
-        JPushInterface.init(this);            // 初始化 JPush
-        //初始化友盟分享，含：微信,新浪微博,qq,qq qzone，在此设置其appid,appkey,appsecret
-        PlatformConfig.setWeixin("wx967daebe835fbeac", "5bb696d9ccd75a38c8a0bfe0675559b3");
-        PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad");
-        PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");*/
-
+        //JPushInterface.setDebugMode(true);    // 设置开启日志,发布时请关闭日志
+        //JPushInterface.init(this);            // 初始化 JPush
     }
+
     public static Context getAppContext() {
         return sAppContext;
     }
+
     public static MainApplication getInstance() {
         return mainApplication;
     }
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
     /**
      * 添加Activity到容器中.
      *
