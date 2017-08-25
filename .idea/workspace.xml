@@ -13,14 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2ab0a4-4498-405f-a4a4-f68f404ad280" name="Default" comment="新增刷新控件和相关demo">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/ChangeClarityDialog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/color/select_change_clarity_color.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/item_change_clarity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/values/colors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TinyWindowPlayActivity.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TinyWindowPlayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" />
     </list>
     <ignored path="FrameWork.iws" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -4824,7 +4817,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503655490520</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="新增刷新控件和相关demo">
+      <created>1503656868052</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1503656868053</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
