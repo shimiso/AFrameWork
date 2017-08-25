@@ -2,6 +2,7 @@ package com.shims.nicevideoplayer;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.SurfaceTexture;
 import android.media.AudioManager;
@@ -81,6 +82,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
     private SurfaceTexture mSurfaceTexture;
     private Surface mSurface;
 
+    /**缓冲半分比**/
     private int mBufferPercentage;
 
     //是否从上一次的位置继续播放
@@ -135,8 +137,11 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
     public void start() {
         if (mCurrentState == STATE_IDLE) {
             NiceVideoPlayerManager.instance().setCurrentNiceVideoPlayer(this);
+            //初始化音量管理
             initAudioManager();
+            //初始化MediaPlayer
             initMediaPlayer();
+            //初始化TextureView
             initTextureView();
             addTextureView();
         } else {
@@ -147,6 +152,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
     private void initAudioManager() {
         if (mAudioManager == null) {
             mAudioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
+            //永久获得音频控制焦点,只能手动释放
             mAudioManager.requestAudioFocus(null, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
         }
     }
@@ -226,7 +232,9 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
 
     @Override
     public void seekTo(long pos) {
-
+        if (mMediaPlayer != null) {
+            mMediaPlayer.seekTo(pos);
+        }
     }
 
     @Override
@@ -306,52 +314,127 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
 
     @Override
     public int getMaxVolume() {
+        if (mAudioManager != null) {
+            return mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+        }
         return 0;
     }
 
     @Override
     public int getVolume() {
+        if (mAudioManager != null) {
+            return mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+        }
         return 0;
     }
 
     @Override
     public long getDuration() {
-        return 0;
+        return mMediaPlayer != null ? mMediaPlayer.getDuration() : 0;
     }
 
     @Override
     public long getCurrentPosition() {
-        return 0;
+        return mMediaPlayer != null ? mMediaPlayer.getCurrentPosition() : 0;
     }
 
     @Override
     public int getBufferPercentage() {
-        return 0;
+        return mBufferPercentage;
     }
 
     @Override
     public float getSpeed(float speed) {
+        if (mMediaPlayer instanceof IjkMediaPlayer) {
+            return ((IjkMediaPlayer) mMediaPlayer).getSpeed(speed);
+        }
         return 0;
     }
 
     @Override
     public long getTcpSpeed() {
+        if (mMediaPlayer instanceof IjkMediaPlayer) {
+            return ((IjkMediaPlayer) mMediaPlayer).getTcpSpeed();
+        }
         return 0;
     }
-
+    /**
+     * 全屏，将mContainer(内部包含mTextureView和mController)从当前容器中移除，并添加到android.R.content中.
+     * 切换横屏时需要在manifest的activity标签下添加android:configChanges="orientation|keyboardHidden|screenSize"配置，
+     * 以避免Activity重新走生命周期
+     */
     @Override
     public void enterFullScreen() {
+        if (mCurrentMode == MODE_FULL_SCREEN) return;
 
+        // 隐藏ActionBar、状态栏，并横屏
+        NiceUtil.hideActionBar(mContext);
+        NiceUtil.scanForActivity(mContext)
+                .setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        ViewGroup contentView = (ViewGroup) NiceUtil.scanForActivity(mContext)
+                .findViewById(android.R.id.content);
+        if (mCurrentMode == MODE_TINY_WINDOW) {
+            contentView.removeView(mContainer);
+        } else {
+            this.removeView(mContainer);
+        }
+        LayoutParams params = new LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT);
+        contentView.addView(mContainer, params);
+
+        mCurrentMode = MODE_FULL_SCREEN;
+        mController.onPlayModeChanged(mCurrentMode);
+        Log.d(TAG,"MODE_FULL_SCREEN");
     }
 
     @Override
     public boolean exitFullScreen() {
+        if (mCurrentMode == MODE_FULL_SCREEN) {
+            NiceUtil.showActionBar(mContext);
+            NiceUtil.scanForActivity(mContext)
+                    .setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+            ViewGroup contentView = (ViewGroup) NiceUtil.scanForActivity(mContext)
+                    .findViewById(android.R.id.content);
+            contentView.removeView(mContainer);
+            LayoutParams params = new LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT);
+            this.addView(mContainer, params);
+
+            mCurrentMode = MODE_NORMAL;
+            mController.onPlayModeChanged(mCurrentMode);
+            Log.d(TAG,"MODE_NORMAL");
+            return true;
+        }
         return false;
     }
 
+    /**
+     * 进入小窗口播放，小窗口播放的实现原理与全屏播放类似。
+     */
     @Override
     public void enterTinyWindow() {
+        if (mCurrentMode == MODE_TINY_WINDOW) return;
+        this.removeView(mContainer);
 
+        ViewGroup contentView = (ViewGroup) NiceUtil.scanForActivity(mContext)
+                .findViewById(android.R.id.content);
+        // 小窗口的宽度为屏幕宽度的60%，长宽比默认为16:9，右边距、下边距为8dp。
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                (int) (NiceUtil.getScreenWidth(mContext) * 0.6f),
+                (int) (NiceUtil.getScreenWidth(mContext) * 0.6f * 9f / 16f));
+        params.gravity = Gravity.BOTTOM | Gravity.END;
+        params.rightMargin = NiceUtil.dp2px(mContext, 8f);
+        params.bottomMargin = NiceUtil.dp2px(mContext, 8f);
+
+        contentView.addView(mContainer, params);
+
+        mCurrentMode = MODE_TINY_WINDOW;
+        mController.onPlayModeChanged(mCurrentMode);
+        Log.d(TAG,"MODE_TINY_WINDOW");
     }
 
     @Override
@@ -366,7 +449,29 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
 
     @Override
     public void release() {
+        // 保存播放位置
+        if (isPlaying() || isBufferingPlaying() || isBufferingPaused() || isPaused()) {
+            NiceUtil.savePlayPosition(mContext, mUrl, getCurrentPosition());
+        } else if (isCompleted()) {
+            NiceUtil.savePlayPosition(mContext, mUrl, 0);
+        }
+        // 退出全屏或小窗口
+        if (isFullScreen()) {
+            exitFullScreen();
+        }
+        if (isTinyWindow()) {
+            exitTinyWindow();
+        }
+        mCurrentMode = MODE_NORMAL;
 
+        // 释放播放器
+        releasePlayer();
+
+        // 恢复控制器
+        if (mController != null) {
+            mController.reset();
+        }
+        Runtime.getRuntime().gc();
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -395,7 +500,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
     }
 
     private void openMediaPlayer() {
-        // 屏幕常量
+        // 屏幕常亮
         mContainer.setKeepScreenOn(true);
         // 设置监听
         mMediaPlayer.setOnPreparedListener(mOnPreparedListener);
@@ -421,7 +526,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
         }
     }
 
-    /**播放准备就绪监听**/
+    /**准备监听**/
     private IMediaPlayer.OnPreparedListener mOnPreparedListener=new IMediaPlayer.OnPreparedListener(){
 
         @Override
@@ -429,7 +534,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
             mCurrentState = STATE_PREPARED;
             mController.onPlayStateChanged(mCurrentState);
             Log.d(TAG,"onPrepared ——> STATE_PREPARED");
-            iMediaPlayer.start();
+            iMediaPlayer.start();//开始播放
             // 从上次的保存位置播放
             if (continueFromLastPosition) {
                 long savedPlayPosition = NiceUtil.getSavedPlayPosition(mContext, mUrl);
@@ -472,7 +577,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
             return false;
         }
     };
-    /**播放信息事件 在有警告或错误信息时调用。如：开始缓冲、缓冲结束、下载速度变化**/
+    /**指示信息和警告信息监听，如：开始缓冲、缓冲结束、下载速度变化**/
     private IMediaPlayer.OnInfoListener mOnInfoListener =new IMediaPlayer.OnInfoListener(){
 
         @Override
@@ -518,7 +623,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
             return true;
         }
     };
-    /**缓冲中监听**/
+    /**缓冲更新监听**/
     private IMediaPlayer.OnBufferingUpdateListener mOnBufferingUpdateListener=new IMediaPlayer.OnBufferingUpdateListener(){
 
         @Override

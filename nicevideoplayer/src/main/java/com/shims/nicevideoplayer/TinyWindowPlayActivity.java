@@ -2,6 +2,8 @@ package com.shims.nicevideoplayer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -25,5 +27,25 @@ public class TinyWindowPlayActivity extends AppCompatActivity {
                 .crossFade()
                 .into(controller.imageView());
         mNiceVideoPlayer.setController(controller);
+    }
+
+    public void enterTinyWindow(View view) {
+        if (mNiceVideoPlayer.isIdle()) {
+            Toast.makeText(this, "要点击播放后才能进入小窗口", Toast.LENGTH_SHORT).show();
+        } else {
+            mNiceVideoPlayer.enterTinyWindow();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        NiceVideoPlayerManager.instance().releaseNiceVideoPlayer();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (NiceVideoPlayerManager.instance().onBackPressd()) return;
+        super.onBackPressed();
     }
 }

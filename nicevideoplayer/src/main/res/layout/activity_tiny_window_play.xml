@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:fitsSystemWindows="true"
+    android:fitsSystemWindows="false"
     tools:context="com.shims.nicevideoplayer.TinyWindowPlayActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -23,4 +23,10 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="enterTinyWindow"
+        android:text="小窗口播放"/>
 </LinearLayout>

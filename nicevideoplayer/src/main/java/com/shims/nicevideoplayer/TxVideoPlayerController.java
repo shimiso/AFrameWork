@@ -1,6 +1,10 @@
 package com.shims.nicevideoplayer;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
 import android.os.CountDownTimer;
 import android.support.annotation.DrawableRes;
 import android.view.LayoutInflater;
@@ -10,20 +14,22 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
  * Created by shims on 2017/8/24.
  */
-public class TxVideoPlayerController extends NiceVideoPlayerController implements View.OnClickListener,SeekBar.OnSeekBarChangeListener{
+public class TxVideoPlayerController extends NiceVideoPlayerController implements View.OnClickListener, SeekBar.OnSeekBarChangeListener {
     private Context mContext;
     private ImageView mImage;//播放前底图
     private ImageView mCenterStart; //中间开始播放按钮
 
-    /**顶部控制区**/
+    /** 顶部控制区 **/
     private LinearLayout mTop;
     private ImageView mBack;
     //标题
@@ -35,13 +41,13 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     //当前时间
     private TextView mTime;
 
-    /**低部控制区**/
+    /** 底部控制区 **/
     private LinearLayout mBottom;
     //播放或暂停按钮
     private ImageView mRestartPause;
-    //左下角当前位置
+    //左下角-当前播放位置
     private TextView mPosition;
-    //左下角总长
+    //左下角-播放文件总时间
     private TextView mDuration;
     //进度条
     private SeekBar mSeek;
@@ -53,34 +59,34 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     //右下角视频总长
     private TextView mLength;
 
-    /**加载动画**/
+    /** 加载动画 **/
     private LinearLayout mLoading;
     //正在缓冲...
     private TextView mLoadText;
 
-    /**改变播放位置**/
+    /** 改变播放位置 **/
     private LinearLayout mChangePositon;
     //播放位置 00:00
     private TextView mChangePositionCurrent;
     //进度位置
     private ProgressBar mChangePositionProgress;
 
-    /**改变亮度**/
+    /** 改变亮度 **/
     private LinearLayout mChangeBrightness;
     //亮度位置
     private ProgressBar mChangeBrightnessProgress;
 
-    /**改变声音**/
+    /** 改变声音 **/
     private LinearLayout mChangeVolume;
     //音量位置
     private ProgressBar mChangeVolumeProgress;
 
-    /**播放错误**/
+    /** 播放错误 **/
     private LinearLayout mError;
     //重试
     private TextView mRetry;
 
-    /**播放完成**/
+    /** 播放完成 **/
     private LinearLayout mCompleted;
     //重播
     private TextView mReplay;
@@ -90,6 +96,11 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     private boolean topBottomVisible;
 
     private CountDownTimer mDismissTopBottomCountDownTimer;
+
+    private List<Clarity> clarities;
+    // 是否已经注册了电池广播
+    private boolean hasRegisterBatteryReceiver;
+
 
     public TxVideoPlayerController(Context context) {
         super(context);
@@ -152,28 +163,43 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     }
 
     @Override
-    public void setTitle(String title) {
-        mTitle.setText(title);
-    }
-
-    @Override
-    public ImageView imageView() {
-        return mImage;
-    }
-
-    @Override
-    public void setImage(@DrawableRes int resId) {
-        mImage.setImageResource(resId);
-    }
-
-    @Override
-    public void setLenght(long length) {
-        mLength.setText(NiceUtil.formatTime(length));
-    }
-
-    @Override
-    protected void reset() {
-
+    public void onClick(View v) {
+        if (v == mCenterStart) {//中间播放
+            if (mNiceVideoPlayer.isIdle()) {
+                mNiceVideoPlayer.start();
+            }
+        } else if (v == mRestartPause) {//左下角暂停和继续播放
+            if (mNiceVideoPlayer.isPlaying() || mNiceVideoPlayer.isBufferingPlaying()) {
+                mNiceVideoPlayer.pause();
+            } else if (mNiceVideoPlayer.isPaused() || mNiceVideoPlayer.isBufferingPaused()) {
+                mNiceVideoPlayer.restart();
+            }
+        } else if (v == mRetry) {//重试
+            mNiceVideoPlayer.restart();
+        } else if (v == mReplay) {//重新播放
+            mRetry.performClick();
+        } else if (v == mShare) {
+            Toast.makeText(mContext, "分享", Toast.LENGTH_SHORT).show();
+        } else if (v == this) {//点击屏幕
+            if (mNiceVideoPlayer.isPlaying()
+                    || mNiceVideoPlayer.isPaused()
+                    || mNiceVideoPlayer.isBufferingPlaying()
+                    || mNiceVideoPlayer.isBufferingPaused()) {
+                setTopBottomVisible(!topBottomVisible);
+            }
+        }else if (v == mFullScreen) {//全屏
+            if (mNiceVideoPlayer.isNormal() || mNiceVideoPlayer.isTinyWindow()) {
+                mNiceVideoPlayer.enterFullScreen();
+            } else if (mNiceVideoPlayer.isFullScreen()) {
+                mNiceVideoPlayer.exitFullScreen();
+            }
+        }else if (v == mBack) {
+            if (mNiceVideoPlayer.isFullScreen()) {
+                mNiceVideoPlayer.exitFullScreen();
+            } else if (mNiceVideoPlayer.isTinyWindow()) {
+                mNiceVideoPlayer.exitTinyWindow();
+            }
+        }
     }
 
     @Override
@@ -195,18 +221,18 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
                 break;
             /**播放准备就绪**/
             case NiceVideoPlayer.STATE_PREPARED:
-                startUpdateProgressTimer();
+                startUpdateProgressTimer();//启动更新进度定时器
                 break;
             /**正在播放**/
             case NiceVideoPlayer.STATE_PLAYING:
-                mLoading.setVisibility(View.GONE);
-                mRestartPause.setImageResource(R.drawable.ic_player_pause);
-                startDismissTopBottomTimer();
+                mLoading.setVisibility(View.GONE);//隐藏加载动画
+                mRestartPause.setImageResource(R.drawable.ic_player_pause);//左下角按钮变成暂停键
+                startDismissTopBottomTimer();//8秒后自动隐藏头部和底部栏
                 break;
             /**暂停播放**/
             case NiceVideoPlayer.STATE_PAUSED:
-                mLoading.setVisibility(View.GONE);
-                mRestartPause.setImageResource(R.drawable.ic_player_start);
+                mLoading.setVisibility(View.GONE);//隐藏加载动画
+                mRestartPause.setImageResource(R.drawable.ic_player_start);//左下角按钮变成播放键
                 cancelDismissTopBottomTimer();
                 break;
             /**正在缓冲 缓冲区足够播放**/
@@ -230,7 +256,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
                 mTop.setVisibility(View.VISIBLE);
                 mError.setVisibility(View.VISIBLE);
                 break;
-            /** 播放完成 **/
+            /**播放完成**/
             case NiceVideoPlayer.STATE_COMPLETED:
                 cancelUpdateProgressTimer();
                 setTopBottomVisible(false);
@@ -238,6 +264,118 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
                 mCompleted.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+
+    @Override
+    protected void onPlayModeChanged(int playMode) {
+        switch (playMode) {
+            case NiceVideoPlayer.MODE_NORMAL:
+                mBack.setVisibility(View.GONE);//隐藏返回按钮
+                mFullScreen.setImageResource(R.drawable.ic_player_enlarge);//显示放大全屏按钮
+//                mFullScreen.setVisibility(View.VISIBLE);
+                mClarity.setVisibility(View.GONE);
+                mBatteryTime.setVisibility(View.GONE);
+                if (hasRegisterBatteryReceiver) {
+                    mContext.unregisterReceiver(mBatterReceiver);
+                    hasRegisterBatteryReceiver = false;
+                }
+                break;
+            case NiceVideoPlayer.MODE_FULL_SCREEN:
+                mBack.setVisibility(View.VISIBLE);//隐藏返回按钮
+//                mFullScreen.setVisibility(View.GONE);
+                mFullScreen.setImageResource(R.drawable.ic_player_shrink);//显示缩放按钮
+                if (clarities != null && clarities.size() > 1) {
+                    mClarity.setVisibility(View.VISIBLE);
+                }
+                mBatteryTime.setVisibility(View.VISIBLE);
+                if (!hasRegisterBatteryReceiver) {
+                    mContext.registerReceiver(mBatterReceiver,
+                            new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+                    hasRegisterBatteryReceiver = true;
+                }
+                break;
+            case NiceVideoPlayer.MODE_TINY_WINDOW:
+                mBack.setVisibility(View.VISIBLE);
+                mClarity.setVisibility(View.GONE);
+                break;
+        }
+    }
+
+    /**
+     * 电池状态即电量变化广播接收器
+     */
+    private BroadcastReceiver mBatterReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int status = intent.getIntExtra(BatteryManager.EXTRA_STATUS,
+                    BatteryManager.BATTERY_STATUS_UNKNOWN);
+            if (status == BatteryManager.BATTERY_STATUS_CHARGING) {
+                // 充电中
+                mBattery.setImageResource(R.drawable.battery_charging);
+            } else if (status == BatteryManager.BATTERY_STATUS_FULL) {
+                // 充电完成
+                mBattery.setImageResource(R.drawable.battery_full);
+            } else {
+                int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 0);
+                int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, 0);
+                int percentage = (int) (((float) level / scale) * 100);
+                if (percentage <= 10) {
+                    mBattery.setImageResource(R.drawable.battery_10);
+                } else if (percentage <= 20) {
+                    mBattery.setImageResource(R.drawable.battery_20);
+                } else if (percentage <= 50) {
+                    mBattery.setImageResource(R.drawable.battery_50);
+                } else if (percentage <= 80) {
+                    mBattery.setImageResource(R.drawable.battery_80);
+                } else if (percentage <= 100) {
+                    mBattery.setImageResource(R.drawable.battery_100);
+                }
+            }
+        }
+    };
+
+    @Override
+    public void setTitle(String title) {
+        mTitle.setText(title);
+    }
+
+    @Override
+    public ImageView imageView() {
+        return mImage;
+    }
+
+    @Override
+    public void setImage(@DrawableRes int resId) {
+        mImage.setImageResource(resId);
+    }
+
+    @Override
+    public void setLenght(long length) {
+        mLength.setText(NiceUtil.formatTime(length));
+    }
+
+    @Override
+    protected void reset() {
+        topBottomVisible = false;
+        cancelUpdateProgressTimer();
+        cancelDismissTopBottomTimer();
+        mSeek.setProgress(0);
+        mSeek.setSecondaryProgress(0);
+
+        mCenterStart.setVisibility(View.VISIBLE);
+        mImage.setVisibility(View.VISIBLE);
+
+        mBottom.setVisibility(View.GONE);
+        mFullScreen.setImageResource(R.drawable.ic_player_enlarge);
+
+        mLength.setVisibility(View.VISIBLE);
+
+        mTop.setVisibility(View.VISIBLE);
+        mBack.setVisibility(View.GONE);
+
+        mLoading.setVisibility(View.GONE);
+        mError.setVisibility(View.GONE);
+        mCompleted.setVisibility(View.GONE);
     }
 
     @Override
@@ -255,25 +393,40 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     }
 
     @Override
-    public void onClick(View v) {
-        if (v == mCenterStart) {
-            if (mNiceVideoPlayer.isIdle()) {
-                mNiceVideoPlayer.start();
-            }
-        }else if (v == mRestartPause) {
-            if (mNiceVideoPlayer.isPlaying() || mNiceVideoPlayer.isBufferingPlaying()) {
-                mNiceVideoPlayer.pause();
-            } else if (mNiceVideoPlayer.isPaused() || mNiceVideoPlayer.isBufferingPaused()) {
-                mNiceVideoPlayer.restart();
-            }
-        } else if (v == this) {
-            if (mNiceVideoPlayer.isPlaying()
-                    || mNiceVideoPlayer.isPaused()
-                    || mNiceVideoPlayer.isBufferingPlaying()
-                    || mNiceVideoPlayer.isBufferingPaused()) {
-                setTopBottomVisible(!topBottomVisible);
-            }
-        }
+    protected void showChangePosition(long duration, int newPositionProgress) {
+        mChangePositon.setVisibility(View.VISIBLE);
+        long newPosition = (long) (duration * newPositionProgress / 100f);
+        mChangePositionCurrent.setText(NiceUtil.formatTime(newPosition));
+        mChangePositionProgress.setProgress(newPositionProgress);
+        mSeek.setProgress(newPositionProgress);
+        mPosition.setText(NiceUtil.formatTime(newPosition));
+    }
+
+    @Override
+    protected void hideChangePosition() {
+        mChangePositon.setVisibility(View.GONE);
+    }
+
+    @Override
+    protected void showChangeVolume(int newVolumeProgress) {
+        mChangeVolume.setVisibility(View.VISIBLE);
+        mChangeVolumeProgress.setProgress(newVolumeProgress);
+    }
+
+    @Override
+    protected void hideChangeVolume() {
+        mChangeVolume.setVisibility(View.GONE);
+    }
+
+    @Override
+    protected void showChangeBrightness(int newBrightnessProgress) {
+        mChangeBrightness.setVisibility(View.VISIBLE);
+        mChangeBrightnessProgress.setProgress(newBrightnessProgress);
+    }
+
+    @Override
+    protected void hideChangeBrightness() {
+        mChangeBrightness.setVisibility(View.GONE);
     }
 
     /**
@@ -294,6 +447,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
             cancelDismissTopBottomTimer();
         }
     }
+
     /**
      * 开启top、bottom自动消失的timer
      * 8秒钟后自动消失
@@ -337,6 +491,11 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
-
+        if (mNiceVideoPlayer.isBufferingPaused() || mNiceVideoPlayer.isPaused()) {
+            mNiceVideoPlayer.restart();
+        }
+        long position = (long) (mNiceVideoPlayer.getDuration() * seekBar.getProgress() / 100f);
+        mNiceVideoPlayer.seekTo(position);
+        startDismissTopBottomTimer();
     }
 }

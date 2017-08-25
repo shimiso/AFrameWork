@@ -21,7 +21,7 @@ public class NiceTextureView extends TextureView {
         if (this.videoWidth != videoWidth && this.videoHeight != videoHeight) {
             this.videoWidth = videoWidth;
             this.videoHeight = videoHeight;
-            requestLayout();
+            requestLayout();//控件会重新执行 onMesure() onLayout() 对所有的子控件进行测量和定位
         }
     }
 
@@ -29,7 +29,7 @@ public class NiceTextureView extends TextureView {
     public void setRotation(float rotation) {
         if (rotation != getRotation()) {
             super.setRotation(rotation);
-            requestLayout();
+            requestLayout();//控件会重新执行 onMesure() onLayout() 对所有的子控件进行测量和定位
         }
     }
 
@@ -100,6 +100,7 @@ public class NiceTextureView extends TextureView {
         } else {
             // no size yet, just adopt the given spec sizes
         }
+        //调用setMeasureDimension方法保存自己的测量大小
         setMeasuredDimension(width, height);
     }
 }
