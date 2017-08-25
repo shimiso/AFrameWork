@@ -439,12 +439,43 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
 
     @Override
     public boolean exitTinyWindow() {
+        if (mCurrentMode == MODE_TINY_WINDOW) {
+            ViewGroup contentView = (ViewGroup) NiceUtil.scanForActivity(mContext)
+                    .findViewById(android.R.id.content);
+            contentView.removeView(mContainer);
+            LayoutParams params = new LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT);
+            this.addView(mContainer, params);
+
+            mCurrentMode = MODE_NORMAL;
+            mController.onPlayModeChanged(mCurrentMode);
+            Log.d(TAG,"MODE_NORMAL");
+            return true;
+        }
         return false;
     }
 
     @Override
     public void releasePlayer() {
-
+        if (mAudioManager != null) {
+            mAudioManager.abandonAudioFocus(null);
+            mAudioManager = null;
+        }
+        if (mMediaPlayer != null) {
+            mMediaPlayer.release();
+            mMediaPlayer = null;
+        }
+        mContainer.removeView(mTextureView);
+        if (mSurface != null) {
+            mSurface.release();
+            mSurface = null;
+        }
+        if (mSurfaceTexture != null) {
+            mSurfaceTexture.release();
+            mSurfaceTexture = null;
+        }
+        mCurrentState = STATE_IDLE;
     }
 
     @Override
