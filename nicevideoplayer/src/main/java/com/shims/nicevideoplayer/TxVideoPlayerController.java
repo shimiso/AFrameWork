@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -24,7 +25,7 @@ import java.util.Locale;
 /**
  * Created by shims on 2017/8/24.
  */
-public class TxVideoPlayerController extends NiceVideoPlayerController implements View.OnClickListener, SeekBar.OnSeekBarChangeListener {
+public class TxVideoPlayerController extends NiceVideoPlayerController implements View.OnClickListener, SeekBar.OnSeekBarChangeListener, ChangeClarityDialog.OnClarityChangedListener {
     private Context mContext;
     private ImageView mImage;//播放前底图
     private ImageView mCenterStart; //中间开始播放按钮
@@ -97,9 +98,14 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
 
     private CountDownTimer mDismissTopBottomCountDownTimer;
 
+    private int defaultClarityIndex;
     private List<Clarity> clarities;
+    private ChangeClarityDialog mClarityDialog;
+
     // 是否已经注册了电池广播
     private boolean hasRegisterBatteryReceiver;
+
+
 
 
     public TxVideoPlayerController(Context context) {
@@ -199,6 +205,9 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
             } else if (mNiceVideoPlayer.isTinyWindow()) {
                 mNiceVideoPlayer.exitTinyWindow();
             }
+        }else if (v == mClarity) {
+            setTopBottomVisible(false); // 隐藏top、bottom
+            mClarityDialog.show();     // 显示清晰度对话框
         }
     }
 
@@ -302,6 +311,32 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     }
 
     /**
+     * 设置清晰度
+     *
+     * @param clarities 清晰度及链接
+     */
+    public void setClarity(List<Clarity> clarities, int defaultClarityIndex) {
+        if (clarities != null && clarities.size() > 1) {
+            this.clarities = clarities;
+            this.defaultClarityIndex = defaultClarityIndex;
+
+            List<String> clarityGrades = new ArrayList<>();
+            for (Clarity clarity : clarities) {
+                clarityGrades.add(clarity.grade + " " + clarity.p);
+            }
+            mClarity.setText(clarities.get(defaultClarityIndex).grade);
+            // 初始化切换清晰度对话框
+            mClarityDialog = new ChangeClarityDialog(mContext);
+            mClarityDialog.setClarityGrade(clarityGrades, defaultClarityIndex);
+            mClarityDialog.setOnClarityCheckedListener(this);
+            // 给播放器配置视频链接地址
+            if (mNiceVideoPlayer != null) {
+                mNiceVideoPlayer.setUp(clarities.get(defaultClarityIndex).videoUrl, null);
+            }
+        }
+    }
+
+    /**
      * 电池状态即电量变化广播接收器
      */
     private BroadcastReceiver mBatterReceiver = new BroadcastReceiver() {
@@ -352,6 +387,15 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     @Override
     public void setLenght(long length) {
         mLength.setText(NiceUtil.formatTime(length));
+    }
+
+    @Override
+    public void setNiceVideoPlayer(INiceVideoPlayer niceVideoPlayer) {
+        super.setNiceVideoPlayer(niceVideoPlayer);
+        // 给播放器配置视频链接地址
+        if (clarities != null && clarities.size() > 1) {
+            mNiceVideoPlayer.setUp(clarities.get(defaultClarityIndex).videoUrl, null);
+        }
     }
 
     @Override
@@ -497,5 +541,22 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
         long position = (long) (mNiceVideoPlayer.getDuration() * seekBar.getProgress() / 100f);
         mNiceVideoPlayer.seekTo(position);
         startDismissTopBottomTimer();
+    }
+
+    @Override
+    public void onClarityChanged(int clarityIndex) {
+        // 根据切换后的清晰度索引值，设置对应的视频链接地址，并从当前播放位置接着播放
+        Clarity clarity = clarities.get(clarityIndex);
+        mClarity.setText(clarity.grade);
+        long currentPosition = mNiceVideoPlayer.getCurrentPosition();
+        mNiceVideoPlayer.releasePlayer();
+        mNiceVideoPlayer.setUp(clarity.videoUrl, null);
+        mNiceVideoPlayer.start(currentPosition);
+    }
+
+    @Override
+    public void onClarityNotChanged() {
+        // 清晰度没有变化，对话框消失后，需要重新显示出top、bottom
+        setTopBottomVisible(true);
     }
 }
