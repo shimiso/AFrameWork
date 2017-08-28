@@ -107,7 +107,7 @@
     <string name="channel_edit_sample">Tab频道编辑</string>
     <string name="bottom_tab_sample">BootomTab切换例子</string>
     <string name="swiperefresh_sample">Swipe刷新</string>
-    <string name="pulltorefresh_sample">分享示例子</string>
+    <string name="pulltorefresh_sample">下拉刷新例子</string>
     <string name="share_auth_sample">授权示例子</string>
     <string name="retry_refresh_news">点我一下,重新加载</string>
     <string name="loading">加载中…</string>

@@ -14,7 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f2ab0a4-4498-405f-a4a4-f68f404ad280" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" />
     </list>
     <ignored path="aframework/build/" />
     <ignored path="build/" />
@@ -52,65 +52,7 @@
     <favorites_list name="FrameWork" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TinyWindowPlayActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TinyWindowPlayActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TxVideoPlayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2451">
-              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NiceVideoPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="433" column="0" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NiceVideoPlayerController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NiceTextureView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceTextureView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
-              <folding>
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -4251,7 +4193,6 @@
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/PullToRefreshLauncherActivity.java" />
         <option value="$PROJECT_DIR$/aframework/src/main/res/menu/main_drawer.xml" />
-        <option value="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/CarHomePullToRefreshActivity.java" />
         <option value="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/ui/activities/MainActivity.java" />
         <option value="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/MainApplication.java" />
@@ -4278,6 +4219,7 @@
         <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/activity_tiny_window_play.xml" />
         <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java" />
         <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" />
+        <option value="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -4317,26 +4259,6 @@
       </pane>
       <pane id="AndroidView">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AFrameWork" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pulltorefresh" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="AFrameWork" />
@@ -4865,12 +4787,19 @@
       <option name="project" value="LOCAL" />
       <updated>1503901422283</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="新增刷新控件和相关demo">
+      <created>1503901464130</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1503901464130</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1554" height="912" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30882353" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -4886,7 +4815,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19194631" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19194631" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4975,14 +4904,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.android/build-cache/639567b8a118ba64ecb7d29dbf10181657d30903/output/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="1413" column="17" selection-start-line="1413" selection-start-column="17" selection-end-line="1413" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aframework/src/main/res/layout/jni.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -5119,17 +5040,6 @@
         <state relative-caret-position="114">
           <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aframework/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/AndroidManifest.xml">
@@ -5364,6 +5274,25 @@
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframework/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2071">
+          <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aframework/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="79" column="51" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
       </provider>
     </entry>
   </component>
