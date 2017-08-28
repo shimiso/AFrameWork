@@ -1,13 +1,21 @@
 package com.shims.nicevideoplayer;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.DrawableRes;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
+import java.lang.reflect.Field;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -156,8 +164,79 @@ public abstract class NiceVideoPlayerController  extends FrameLayout implements 
     private long mNewPosition;
 
 
+    private int startX = 0;
+    private int startY = 0;
+    private int mTop;
+    private int mLeft;
+    ViewGroup mViewGroup;
+    /**
+     * 动态设置控件的marginTop 和 marginLeft的值
+     *
+     * @param dX x轴的偏移量
+     * @param dY y轴的偏移量
+     */
+    private void setTinyWindowMargin(int dX, int dY) {
+        FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) mViewGroup.getLayoutParams();
+        int top = mTop + dY;
+        int left = mLeft + dX;
+
+        DisplayMetrics dm = new DisplayMetrics();
+        WindowManager windowManager = ((Activity) getContext()).getWindowManager();
+        windowManager.getDefaultDisplay().getMetrics(dm);
+
+        int l = NiceUtil.getScreenWidth(mContext) - (int) (NiceUtil.getScreenWidth(mContext) * 0.6f);
+        int t = NiceUtil.getScreenHeight(mContext) - (int) (NiceUtil.getScreenWidth(mContext) * 0.6f * 9f / 16f);
+        //设置left和top的边界值
+        if (left < 0) {
+            left = 0;
+        } else if (left > l) {
+            left = l;
+        }
+        if (top < getStatusBarHeight()) {
+            top = getStatusBarHeight();
+        } else if (top > t) {
+            top = t;
+        }
+
+        layoutParams.gravity = Gravity.TOP | Gravity.LEFT;
+        layoutParams.leftMargin = left;
+        layoutParams.topMargin = top;
+        mViewGroup.setLayoutParams(layoutParams);
+    }
+
     @Override
     public boolean onTouch(View v, MotionEvent event) {
+        //浮动小窗口拖动事件
+        if(mNiceVideoPlayer.isTinyWindow()){
+            mViewGroup =(ViewGroup)getParent();
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    //初始化开始位置
+                    startX = (int) event.getRawX();
+                    startY = (int) event.getRawY();
+                    mTop = mViewGroup.getTop();
+                    mLeft = mViewGroup.getLeft();
+                    break;
+                case MotionEvent.ACTION_MOVE:
+                    //手势移动的dX和dY为控件的marginLeft和marginTop
+                    int moveX = (int) event.getRawX();
+                    int moveY = (int) event.getRawY();
+                    int dX = moveX - startX;
+                    int dY = moveY - startY;
+                    setTinyWindowMargin(dX, dY);
+                    break;
+                case MotionEvent.ACTION_UP:
+                    //初始值重置
+                    startX = (int) event.getRawX();
+                    startY = (int) event.getRawY();
+                    mTop = mViewGroup.getTop();
+                    mLeft = mViewGroup.getLeft();
+                    break;
+            }
+
+            return false;
+        }
+
         // 只有全屏的时候才能拖动位置、亮度、声音
         if (!mNiceVideoPlayer.isFullScreen()) {
             return false;
@@ -259,6 +338,27 @@ public abstract class NiceVideoPlayerController  extends FrameLayout implements 
         return false;
     }
 
+    /**
+     * 获取状态栏的高度
+     *
+     * @return
+     */
+    private int getStatusBarHeight() {
+        Class<?> c = null;
+        Object obj = null;
+        Field field = null;
+        int x = 0, sbar = 0;
+        try {
+            c = Class.forName("com.android.internal.R$dimen");
+            obj = c.newInstance();
+            field = c.getField("status_bar_height");
+            x = Integer.parseInt(field.get(obj).toString());
+            sbar = getResources().getDimensionPixelSize(x);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+        return sbar;
+    }
 
     /**
      * 手势左右滑动改变播放位置时，显示控制器中间的播放位置变化视图，

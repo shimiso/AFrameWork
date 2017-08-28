@@ -427,8 +427,8 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
                 (int) (NiceUtil.getScreenWidth(mContext) * 0.6f),
                 (int) (NiceUtil.getScreenWidth(mContext) * 0.6f * 9f / 16f));
         params.gravity = Gravity.BOTTOM | Gravity.END;
-        params.rightMargin = NiceUtil.dp2px(mContext, 8f);
-        params.bottomMargin = NiceUtil.dp2px(mContext, 8f);
+//        params.rightMargin = NiceUtil.dp2px(mContext, 8f);
+//        params.bottomMargin = NiceUtil.dp2px(mContext, 8f);
 
         contentView.addView(mContainer, params);
 
