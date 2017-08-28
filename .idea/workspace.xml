@@ -13,21 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2ab0a4-4498-405f-a4a4-f68f404ad280" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable-xhdpi/twitter_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/CompatHomeKeyActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/HomeKeyWatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" />
     </list>
     <ignored path="aframework/build/" />
@@ -104,11 +90,9 @@
       <file leaf-file-name="NiceVideoPlayerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3177">
-              <caret line="260" column="35" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="247">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -4874,7 +4858,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503882899759</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="新增刷新控件和相关demo">
+      <created>1503901422283</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1503901422283</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -5369,11 +5360,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3177">
-          <caret line="260" column="35" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="247">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
