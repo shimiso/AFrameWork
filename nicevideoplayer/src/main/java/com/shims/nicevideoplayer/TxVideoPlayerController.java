@@ -65,6 +65,9 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     //正在缓冲...
     private TextView mLoadText;
 
+    /**锁定**/
+    private ImageView mPlayerLockScreen;
+
     /** 改变播放位置 **/
     private LinearLayout mChangePositon;
     //播放位置 00:00
@@ -93,7 +96,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     private TextView mReplay;
     //分享
     private TextView mShare;
-
+    //顶部和底部控件是否显示
     private boolean topBottomVisible;
 
     private CountDownTimer mDismissTopBottomCountDownTimer;
@@ -139,6 +142,8 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
         mLoading = (LinearLayout) findViewById(R.id.loading);
         mLoadText = (TextView) findViewById(R.id.load_text);
 
+        mPlayerLockScreen = (ImageView) findViewById(R.id.player_lock_screen);
+
         mChangePositon = (LinearLayout) findViewById(R.id.change_position);
         mChangePositionCurrent = (TextView) findViewById(R.id.change_position_current);
         mChangePositionProgress = (ProgressBar) findViewById(R.id.change_position_progress);
@@ -160,6 +165,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
         mBack.setOnClickListener(this);
         mRestartPause.setOnClickListener(this);
         mFullScreen.setOnClickListener(this);
+        mPlayerLockScreen.setOnClickListener(this);
         mClarity.setOnClickListener(this);
         mRetry.setOnClickListener(this);
         mReplay.setOnClickListener(this);
@@ -193,6 +199,8 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
                     || mNiceVideoPlayer.isBufferingPaused()) {
                 setTopBottomVisible(!topBottomVisible);
             }
+        }else if(v==mPlayerLockScreen){//锁屏
+            setLock(!isLock);
         }else if (v == mFullScreen) {//全屏
             if (mNiceVideoPlayer.isNormal() || mNiceVideoPlayer.isTinyWindow()) {
                 mNiceVideoPlayer.enterFullScreen();
@@ -211,6 +219,30 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
         }
     }
 
+    /**
+     * 设置锁屏控件的显示和隐藏
+     *
+     * @param lock true锁屏，false没锁屏.
+     */
+    private void setLock(boolean lock) {
+        mTop.setVisibility(lock ? View.GONE : View.VISIBLE);
+        mBottom.setVisibility(lock ? View.GONE : View.VISIBLE);
+        isLock = lock;
+        if (lock) {
+            if (!mNiceVideoPlayer.isPaused() && !mNiceVideoPlayer.isBufferingPaused()) {
+                //只要不是暂停或者缓冲状态,top和bottom在8秒后自动消失
+                startDismissTopBottomTimer();
+            }
+            mPlayerLockScreen.setImageResource(R.drawable.video_locked);
+        } else {
+            cancelDismissTopBottomTimer();
+            mPlayerLockScreen.setImageResource(R.drawable.video_unlock);
+        }
+    }
+
+    /**
+     * 当播放器的播放状态发生变化，在此方法中更新不同的播放状态的UI
+     */
     @Override
     protected void onPlayStateChanged(int playState) {
         switch (playState) {
@@ -274,7 +306,9 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
                 break;
         }
     }
-
+    /**
+     * 播放器的播放模式发生变化，在此方法中更新不同模式下的控制器界面。
+     */
     @Override
     protected void onPlayModeChanged(int playMode) {
         switch (playMode) {
@@ -284,6 +318,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
 //                mFullScreen.setVisibility(View.VISIBLE);
                 mClarity.setVisibility(View.GONE);
                 mBatteryTime.setVisibility(View.GONE);
+                mPlayerLockScreen.setVisibility(View.GONE);
                 if (hasRegisterBatteryReceiver) {
                     mContext.unregisterReceiver(mBatterReceiver);
                     hasRegisterBatteryReceiver = false;
@@ -291,6 +326,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
                 break;
             case NiceVideoPlayer.MODE_FULL_SCREEN:
                 mBack.setVisibility(View.VISIBLE);//隐藏返回按钮
+                mPlayerLockScreen.setVisibility(View.VISIBLE);
 //                mFullScreen.setVisibility(View.GONE);
                 mFullScreen.setImageResource(R.drawable.ic_player_shrink);//显示缩放按钮
                 if (clarities != null && clarities.size() > 1) {
@@ -306,6 +342,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
             case NiceVideoPlayer.MODE_TINY_WINDOW:
                 mBack.setVisibility(View.VISIBLE);
                 mClarity.setVisibility(View.GONE);
+                mPlayerLockScreen.setVisibility(View.GONE);
                 break;
         }
     }
@@ -479,8 +516,14 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
      * @param visible true显示，false隐藏.
      */
     private void setTopBottomVisible(boolean visible) {
-        mTop.setVisibility(visible ? View.VISIBLE : View.GONE);
-        mBottom.setVisibility(visible ? View.VISIBLE : View.GONE);
+        if(!isLock){
+            mTop.setVisibility(visible ? View.VISIBLE : View.GONE);
+            mBottom.setVisibility(visible ? View.VISIBLE : View.GONE);
+        }
+
+        if(mNiceVideoPlayer.isFullScreen())
+            mPlayerLockScreen.setVisibility(visible ? View.VISIBLE : View.GONE);
+
         topBottomVisible = visible;
         if (visible) {
             if (!mNiceVideoPlayer.isPaused() && !mNiceVideoPlayer.isBufferingPaused()) {

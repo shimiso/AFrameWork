@@ -164,6 +164,7 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
                     mMediaPlayer = new AndroidMediaPlayer();
                     break;
                 case TYPE_IJK:
+                    mMediaPlayer = new IjkMediaPlayer();
                 default:
                     mMediaPlayer = new IjkMediaPlayer();
                     break;
@@ -239,12 +240,18 @@ public class NiceVideoPlayer extends FrameLayout implements INiceVideoPlayer,Tex
 
     @Override
     public void setVolume(int volume) {
-
+        if (mAudioManager != null) {
+            mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
+        }
     }
 
     @Override
     public void setSpeed(float speed) {
-
+        if (mMediaPlayer instanceof IjkMediaPlayer) {
+            ((IjkMediaPlayer) mMediaPlayer).setSpeed(speed);
+        } else {
+            Log.d(TAG,"只有IjkPlayer才能设置播放速度");
+        }
     }
 
     @Override

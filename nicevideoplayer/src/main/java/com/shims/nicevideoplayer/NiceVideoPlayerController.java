@@ -24,6 +24,8 @@ public abstract class NiceVideoPlayerController  extends FrameLayout implements 
     protected INiceVideoPlayer mNiceVideoPlayer;
     private Timer mUpdateProgressTimer;
     private TimerTask mUpdateProgressTimerTask;
+    //锁屏控件是否显示
+    protected boolean isLock = false;
 
 
     public NiceVideoPlayerController(Context context) {
@@ -233,8 +235,8 @@ public abstract class NiceVideoPlayerController  extends FrameLayout implements 
             return false;
         }
 
-        // 只有全屏的时候才能拖动位置、亮度、声音
-        if (!mNiceVideoPlayer.isFullScreen()) {
+        // 如果是非全屏和锁定状态，无法拖动位置、亮度、声音
+        if (!mNiceVideoPlayer.isFullScreen()||isLock) {
             return false;
         }
         // 只有在播放、暂停、缓冲的时候能够拖动改变位置、亮度和声音
