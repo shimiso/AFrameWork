@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--底图-->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_default"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    <!--加载动画-->
+    <include layout="@layout/video_controller_loading" />
+
+    <ImageView
+        android:id="@+id/player_lock_screen"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/video_unlock"
+        android:visibility="gone" />
+
+    <!--改变播放位置-->
+    <include layout="@layout/video_controller_progress" />
+
+    <!--改变亮度-->
+    <include layout="@layout/video_controller_brightness"/>
+
+    <!--改变声音-->
+    <include layout="@layout/video_controller_volume"/>
+
+    <!--播放完成-->
+    <include layout="@layout/video_controller_complete"/>
+
+    <!--播放错误-->
+    <include layout="@layout/video_controller_error"/>
+
+    <!--顶部控制区-->
+    <include layout="@layout/video_controller_top"/>
+
+    <!--底部控制区-->
+    <include layout="@layout/video_controller_bottom"/>
+
+    <!--右下角初始显示的总时长-->
+    <TextView
+        android:id="@+id/length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <!--中间开始播放按钮-->
+    <ImageView
+        android:id="@+id/center_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_player_center_start"
+        android:visibility="visible" />
+
+</RelativeLayout>

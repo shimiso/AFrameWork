@@ -118,7 +118,7 @@ public class TxVideoPlayerController extends NiceVideoPlayerController implement
     }
 
     private void init() {
-        LayoutInflater.from(mContext).inflate(R.layout.tx_video_palyer_controller, this, true);
+        LayoutInflater.from(mContext).inflate(R.layout.video_palyer_controller, this, true);
 
         mCenterStart = (ImageView) findViewById(R.id.center_start);
         mImage = (ImageView) findViewById(R.id.image);

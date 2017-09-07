@@ -13,9 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2ab0a4-4498-405f-a4a4-f68f404ad280" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable-xhdpi/video_locked.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable-xhdpi/video_unlock.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileContent/fileContent.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_bottom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_brightness.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_complete.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_error.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_loading.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_progress.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_top.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_volume.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" />
@@ -26,12 +31,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aframework/aframework.iml" afterPath="$PROJECT_DIR$/aframework/aframework.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" afterPath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_palyer_controller.xml" />
     </list>
     <ignored path="aframework/build/" />
     <ignored path="build/" />
@@ -70,38 +71,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tx_video_palyer_controller.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml">
+      <file leaf-file-name="video_controller_error.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_error.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="37" column="14" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="14" />
+            <state relative-caret-position="38">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TxVideoPlayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java">
+      <file leaf-file-name="video_palyer_controller.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_palyer_controller.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="525" column="0" selection-start-line="525" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
+            <state relative-caret-position="341">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NiceVideoPlayer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java">
+      <file leaf-file-name="video_controller_loading.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_loading.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-949">
-              <caret line="166" column="56" selection-start-line="166" selection-start-column="56" selection-end-line="166" selection-end-column="56" />
-              <folding>
-                <element signature="e#3378#3379#0" expanded="true" />
-                <element signature="e#3418#3419#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="38">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,6 +116,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
       </list>
     </option>
   </component>
@@ -4223,17 +4228,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable/refreshing_header_anim.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/res/layout/tmall_footer_loadinglayout.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/res/layout/tmall_header_loadinglayout.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/build/intermediates/res/merged/debug/layout/tmall_header_loadinglayout.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/build/intermediates/bundles/default/res/layout/tmall_header_loadinglayout.xml" />
-        <option value="$PROJECT_DIR$/aframework/build/intermediates/res/merged/debug/layout/tmall_header_loadinglayout.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/TmallPullToRefreshActivity.java" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/LauncherActivity.java" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable/pull_to_refresh_second_anim.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable/pull_to_refresh_third_anim.xml" />
-        <option value="$PROJECT_DIR$/pulltorefresh/src/main/res/layout/activity_ptr_meituan.xml" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/loadinglayout/MeiTuanHeaderLayout.java" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/MeiTuanPullToRefreshActivity.java" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/res/layout/meituan_header_loadinglayout.xml" />
@@ -4253,7 +4247,6 @@
         <option value="$PROJECT_DIR$/pulltorefresh/build.gradle" />
         <option value="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/samples/loadinglayout/AutoHomeHeaderLayout.java" />
         <option value="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/widget/ProgressView.java" />
-        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceUtil.java" />
         <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/INiceVideoPlayer.java" />
         <option value="$PROJECT_DIR$/nicevideoplayer/build.gradle" />
         <option value="$PROJECT_DIR$/config.gradle" />
@@ -4270,10 +4263,22 @@
         <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/activity_tiny_window_play.xml" />
         <option value="$PROJECT_DIR$/aframework/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/aframework/build.gradle" />
-        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml" />
-        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" />
-        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" />
         <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/view/VideoProgressOverlay.java" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceUtil.java" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable/bg_radius_4.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_overlay_progress.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_bottom.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_top.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_error.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_complete.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_brightness.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_volume.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_loading.xml" />
+        <option value="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_palyer_controller.xml" />
       </list>
     </option>
   </component>
@@ -4357,6 +4362,24 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AFrameWork" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nicevideoplayer" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
@@ -4388,6 +4411,10 @@
               <option name="myItemId" value="nicevideoplayer" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -4395,7 +4422,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VideoPlayer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable-xhdpi" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../sdk" />
     <property name="android.project.structure.last.selected" value="Project" />
     <property name="android.project.structure.proportion" value="0.20875" />
@@ -4418,14 +4445,15 @@
       <recent name="com.shims.nicevideoplayer" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shims.nicevideoplayer.view" />
       <recent name="com.shims.nicevideoplayer" />
       <recent name="com.handmark.pulltorefresh.samples.loadinglayout" />
       <recent name="com.handmark.pulltorefresh.samples" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Android\WorkSpaces\AFrameWork\nicevideoplayer\src\main\res\layout" />
       <recent name="D:\Android\WorkSpaces\AFrameWork\nicevideoplayer\src\main\res\drawable-xhdpi" />
       <recent name="D:\Android\WorkSpaces\AFrameWork\nicevideoplayer\src\main\res" />
-      <recent name="D:\Android\WorkSpaces\AFrameWork\nicevideoplayer\src\main\res\layout" />
       <recent name="D:\Android\WorkSpaces\AFrameWork\nicevideoplayer\src\main\res\values" />
       <recent name="D:\Android\WorkSpaces\AFrameWork" />
     </key>
@@ -4911,7 +4939,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503901544401</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="新增视频播放控件，支持锁屏，拖拽进度，亮度，全屏缩小，挪动等功能">
+      <created>1504753490359</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1504753490359</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4933,6 +4968,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -4946,7 +4982,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -4962,16 +4997,16 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63770056" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2606952" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38101605" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42119566" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30882353" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -4980,12 +5015,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328877" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328877" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795697" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19194631" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24966443" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -5006,7 +5041,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增nice播放器demo" />
     <MESSAGE value="新增刷新控件和相关demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增刷新控件和相关demo" />
+    <MESSAGE value="新增视频播放控件，支持锁屏，拖拽进度，亮度，全屏缩小，挪动等功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增视频播放控件，支持锁屏，拖拽进度，亮度，全屏缩小，挪动等功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5023,94 +5059,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.gradle" />
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdk/platforms/android-23/data/res/layout/auto_complete_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aframework/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/color/select_change_clarity_color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/item_change_clarity.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/ChangeClarityDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="63" column="57" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdk/sources/android-23/android/app/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="280" column="16" selection-start-line="280" selection-start-column="16" selection-end-line="280" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable-xhdpi/loading19.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -5177,13 +5125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="90" column="22" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aframework/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2071">
@@ -5214,6 +5155,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5235,6 +5177,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5415">
           <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5302,29 +5245,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/INiceVideoPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="85" column="24" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdk/sources/android-23/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="800" column="28" selection-start-line="800" selection-start-column="28" selection-end-line="800" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -5342,32 +5266,6 @@
         <state relative-caret-position="1026">
           <caret line="56" column="50" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TinyWindowPlayActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="58" column="58" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="525" column="0" selection-start-line="525" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="312" column="46" selection-start-line="312" selection-start-column="37" selection-end-line="312" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -5389,12 +5287,194 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-949">
+        <state relative-caret-position="1445">
           <caret line="166" column="56" selection-start-line="166" selection-start-column="56" selection-end-line="166" selection-end-column="56" />
           <folding>
             <element signature="e#3378#3379#0" expanded="true" />
             <element signature="e#3418#3419#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sdk/sources/android-23/android/view/MotionEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="197" column="7" selection-start-line="197" selection-start-column="7" selection-end-line="199" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sdk/sources/android-23/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="7423" column="16" selection-start-line="7423" selection-start-column="16" selection-end-line="7423" selection-end-column="16" />
+          <folding>
+            <element signature="e#289644#289645#0" expanded="false" />
+            <element signature="e#289697#289698#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/view/VideoProgressOverlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable/bg_radius_4.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/NiceVideoPlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="64" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TinyWindowPlayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-537">
+          <caret line="376" column="21" selection-start-line="376" selection-start-column="21" selection-end-line="376" selection-end-column="21" />
+          <folding>
+            <element signature="e#15690#15691#0" expanded="true" />
+            <element signature="e#15750#15751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_progress.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_bottom.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_top.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_error.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_complete.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_brightness.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_volume.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_loading.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_palyer_controller.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
