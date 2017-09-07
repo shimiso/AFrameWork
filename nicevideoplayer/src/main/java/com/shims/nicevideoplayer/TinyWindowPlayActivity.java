@@ -16,7 +16,7 @@ public class TinyWindowPlayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tiny_window_play);
+        setContentView(R.layout.tiny_window_play);
 
         mNiceVideoPlayer = (NiceVideoPlayer) findViewById(R.id.nice_video_player);
         mNiceVideoPlayer.setPlayerType(NiceVideoPlayer.TYPE_IJK); // IjkPlayer or MediaPlayer

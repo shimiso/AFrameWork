@@ -13,26 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2ab0a4-4498-405f-a4a4-f68f404ad280" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_bottom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_brightness.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_complete.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_error.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_loading.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_progress.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_top.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_volume.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/resourceHashesCache.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/javaCompile/classAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/javaCompile/javaCompile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/javaCompile/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.0/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TxVideoPlayerController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tx_video_palyer_controller.xml" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_palyer_controller.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TinyWindowPlayActivity.java" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/java/com/shims/nicevideoplayer/TinyWindowPlayActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/activity_tiny_window_play.xml" afterPath="$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tiny_window_play.xml" />
     </list>
     <ignored path="aframework/build/" />
     <ignored path="build/" />
@@ -70,47 +53,7 @@
     <favorites_list name="FrameWork" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="video_controller_error.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_error.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video_palyer_controller.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_palyer_controller.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video_controller_loading.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/video_controller_loading.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -4946,7 +4889,14 @@
       <option name="project" value="LOCAL" />
       <updated>1504753490359</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="新增视频播放控件，支持锁屏，拖拽进度，亮度，全屏缩小，挪动等功能">
+      <created>1504767359509</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1504767359509</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -5059,11 +5009,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable-xhdpi/loading19.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/drawable-xhdpi/ic_palyer_brightness.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -5230,17 +5175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/activity_tiny_window_play.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -5474,6 +5408,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/tiny_window_play.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nicevideoplayer/src/main/res/layout/item_change_clarity.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding />
         </state>
       </provider>
