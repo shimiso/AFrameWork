@@ -6,6 +6,7 @@
     <permission
         android:name="com.eshangke.framework.permission.JPUSH_MESSAGE"
         android:protectionLevel="normal" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <!-- 录音 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- 允许应用可以访问网络 -->
@@ -78,6 +79,11 @@
         <activity
             android:name=".ui.activities.CoordinatorLayoutActivity"
             android:label="@string/coordinator_layout_sample"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activities.PermiSampleActivity"
+            android:label="@string/permission_sample"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
         <activity

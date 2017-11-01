@@ -99,7 +99,7 @@ public class HttpSampleActivity extends BaseActivity implements View.OnClickList
      */
     private void addDownloadTast() {
         for (int i = 0; i < 5; i++) {
-            String url = "http://dl.bintray.com/wyouflf/maven/org/xutils/xutils/3.3.8/xutils-3.3.8.aar";
+            String url = "http://tanzi27niu.cdsb.mobi/wps/wp-content/uploads/2017/05/2017-05-17_17-33-30.mp4";
             String label = i + "xUtils_" + System.nanoTime();
             try {
                 DownloadManager.getInstance().startDownload(

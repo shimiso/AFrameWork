@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.kevin:loopview-1.0.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/c9304721f3b408202676ea8f584fb359dec9ffd2/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/c9304721f3b408202676ea8f584fb359dec9ffd2/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kevin/loopview/1.0.4/7e126729959b670c18ccbe6a61d956a74b57a3d7/loopview-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

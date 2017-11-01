@@ -3,15 +3,12 @@ buildscript {
     repositories {
         jcenter()
         maven { url 'https://maven.google.com' }
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
-
-        //APT(Annotation Processing Tool)是一种处理注释的工具,它对源代码文件进行检测找出其中的Annotation，使用Annotation进行额外的处理。
-        //Annotation处理器在处理Annotation时可以根据源文件中的Annotation生成额外的源文件和其它的文件(文件具体内容由Annotation处理器的编写者决定)
-        // APT还会编译生成的源文件和原来的源文件，将它们一起生成class文件。
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
     }
 }
 
@@ -24,5 +21,16 @@ allprojects {
         maven {
             url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master"
         }
+        google()
     }
+}
+
+ext {
+    minSdkVersion = 14
+    targetSdkVersion = 22 //该设置仅仅是一个声明,无实质的作用,程序运行时如果目标设备的API版本刚好等于此数值,则不必为此程序开启兼容性检查判断,运行效率更高
+    compileSdkVersion = 24  //使用哪个版本的API进行编译
+    buildToolsVersion = '25.0.0'  // build tools的版本
+
+    // App dependencies
+    supportLibVersion = '25.3.1'
 }

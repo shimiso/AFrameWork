@@ -27,9 +27,9 @@
             android:icon="@drawable/ic_menu_share"
             android:title="@string/pulltorefresh_sample" />
         <item
-            android:id="@+id/share_auth_sample"
+            android:id="@+id/permission_sample"
             android:icon="@drawable/ic_menu_auth"
-            android:title="@string/share_auth_sample" />
+            android:title="@string/permission_sample" />
         <item
             android:id="@+id/bottom_tab_sample"
             android:icon="@drawable/ic_menu_save"

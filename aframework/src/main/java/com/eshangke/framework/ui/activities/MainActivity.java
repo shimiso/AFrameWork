@@ -138,6 +138,9 @@ public class MainActivity extends BaseActivity {
                 case R.id.swiperefresh_sample://Swipe刷新
                     intent = new Intent(context, SwipeRefreshActivity.class);
                     break;
+                case R.id.permission_sample://授权
+                    intent = new Intent(context, PermiSampleActivity.class);
+                    break;
                 case R.id.image_detail_sample://图片查看例子
                     intent = new Intent(context, PhotoDetailActivity.class);
                     intent.putExtra("IMAGE_URL", "http://res.eshangke.com/newsphoto/2016/01/27/1453878920.jpg");
