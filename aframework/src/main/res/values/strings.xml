@@ -118,4 +118,6 @@
     <string name="book_detail">图书详情</string>
     <string name="book_list">图书列表</string>
     <string name="jpush_open_notifi">打开自定义的Activity</string>
+
+    <string name="fabs_menu_layout_behavior">"com.eshangke.framework.widget.ScrollAwareFABBehavior"</string>
 </resources>

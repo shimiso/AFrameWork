@@ -1,12 +1,10 @@
 <component name="libraryTable">
   <library name="com.wang.avi:library-1.0.5">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/6a7fd989d0d1e062115316b386baf8bdfc6bb309/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/6a7fd989d0d1e062115316b386baf8bdfc6bb309/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/ded3a6059cac29fe1244caddf5d1a413a5a3f3b7/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/ded3a6059cac29fe1244caddf5d1a413a5a3f3b7/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wang.avi/library/1.0.5/12fd661063389c40ecb4e4da06ad565fe675eb00/library-1.0.5-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

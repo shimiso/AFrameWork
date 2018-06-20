@@ -1,12 +1,10 @@
 <component name="libraryTable">
   <library name="com.kevin:wraprecyclerview-1.0.6">
     <CLASSES>
-      <root url="file://$USER_HOME$/.android/build-cache/abcbc1d7a9083f723ed655909ded263a3b7aaaa3/output/res" />
-      <root url="jar://$USER_HOME$/.android/build-cache/abcbc1d7a9083f723ed655909ded263a3b7aaaa3/output/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/663f3be37c2aaa2eb8baea94f84caf6791754d65/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/663f3be37c2aaa2eb8baea94f84caf6791754d65/output/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.kevin/wraprecyclerview/1.0.6/3a426de9b6e1e0cc78e76ddcfd1f75aa3aa0df7/wraprecyclerview-1.0.6-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
