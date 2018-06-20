@@ -14,18 +14,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.buihha.audiorecorder.Mp3Recorder;
 import com.eshangke.framework.R;
 import com.eshangke.framework.ui.adapter.ChatMsgViewAdapter;
-import com.eshangke.framework.common.Constants;
 import com.eshangke.framework.bean.ChatMsgEntity;
-
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import com.czt.mp3recorder.MP3Recorder;
 
 /**
  * 类的说明：录音demo
@@ -49,7 +45,7 @@ public class MediaRecorderActivity extends BaseActivity{
     private Handler mHandler = new Handler();
     private String voiceName;
     private long startVoiceT, endVoiceT;
-    private Mp3Recorder mp3Recorder = null;
+    private MP3Recorder mp3Recorder = null;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,12 +59,7 @@ public class MediaRecorderActivity extends BaseActivity{
         toolbar.setTitle(getTitle());
         setSupportActionBar(toolbar);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+        toolbar.setNavigationOnClickListener(view -> onBackPressed());
         mListView = (ListView) findViewById(R.id.listview);
         mBtnRcd = (TextView) findViewById(R.id.btn_rcd);
         chatting_mode_btn = (ImageView) this.findViewById(R.id.ivPopUp);
@@ -83,7 +74,7 @@ public class MediaRecorderActivity extends BaseActivity{
                 .findViewById(R.id.voice_rcd_hint_loading);
         voice_rcd_hint_tooshort = (LinearLayout) this
                 .findViewById(R.id.voice_rcd_hint_tooshort);
-        mp3Recorder = new Mp3Recorder(Constants.DEFAULT_SAMPLING_RATE, Constants.BIT_RATE);
+        mp3Recorder = new MP3Recorder();
 
         chatting_mode_btn.setImageResource(R.drawable.chatting_setmode_msg_btn);
 
@@ -276,7 +267,7 @@ public class MediaRecorderActivity extends BaseActivity{
 
     private void start(String externalPath, String fileName) {
         try {
-            mp3Recorder.startRecording(externalPath, fileName);
+            mp3Recorder.start(new File(externalPath, fileName));
             mHandler.postDelayed(mPollTask, POLL_INTERVAL);
         } catch (Exception e) {
             e.printStackTrace();
@@ -288,8 +279,8 @@ public class MediaRecorderActivity extends BaseActivity{
             mHandler.removeCallbacks(mSleepTask);
             mHandler.removeCallbacks(mPollTask);
             volume.setImageResource(R.drawable.amp1);
-            mp3Recorder.stopRecording();
-        } catch (IOException e) {
+            mp3Recorder.stop();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

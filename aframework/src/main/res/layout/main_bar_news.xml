@@ -61,6 +61,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_arrow_upward"
-        app:layout_behavior="com.eshangke.framework.widget.ScrollAwareFABBehaviorDefault"/>
+        app:layout_behavior="com.eshangke.framework.widget.ScrollAwareFABBehavior"/>
 
 </android.support.design.widget.CoordinatorLayout>

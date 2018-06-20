@@ -17,11 +17,11 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         multiDexEnabled true
-        ndk{
-            moduleName "myjni"//设置库(so)文件名称
-            ldLibs "log", "z", "m"//添加系统库
-            abiFilters "armeabi", "armeabi-v7a", "x86"//生成3中类的.so文件
-        }
+//        ndk{
+//            moduleName "myjni"//设置库(so)文件名称
+//            ldLibs "log", "z", "m"//添加系统库
+//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"//生成3中类的.so文件
+//        }
     }
     // 这个配置会影响所有编译 Java 源代码的任务。
     compileOptions {
@@ -55,6 +55,8 @@ dependencies {
     compile "com.android.support:cardview-v7:${rootProject.ext.supportLibVersion}"
     //分割Dex打包
     compile 'com.android.support:multidex:1.0.1'
+    //mp3recorder
+    compile project(':mp3recorder')
     //pulltorefresh
     compile project(':pulltorefresh')
     //pulltorefresh
