@@ -2,6 +2,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -96,4 +97,11 @@ dependencies {
     //butterknife
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //GreenDao数据库
+    compile 'org.greenrobot:greendao:3.2.2'
+}
+greendao {
+    schemaVersion 1//数据库版本号
+    daoPackage 'com.eshangke.framework.gen'  //自己的项目包名    生成gen包的
+    targetGenDir 'src/main/java' //设置DaoMaster、DaoSession、Dao目录
 }

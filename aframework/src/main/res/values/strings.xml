@@ -115,6 +115,7 @@
     <string name="my_channel">我的频道</string>
     <string name="more_channel">更多频道</string>
     <string name="rx_android_sample">RxAndroid例子</string>
+    <string name="greendao_sample">GreenDao例子</string>
     <string name="book_detail">图书详情</string>
     <string name="book_list">图书列表</string>
     <string name="jpush_open_notifi">打开自定义的Activity</string>

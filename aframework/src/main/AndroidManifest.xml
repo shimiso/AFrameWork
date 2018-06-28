@@ -199,6 +199,11 @@
             android:label="@string/bottom_tab_sample"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activities.GreenDaoActivity"
+            android:label="@string/greendao_sample"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
         <!-- 安装包下载服务 -->
         <service android:name=".service.ApkDownloadService" />
