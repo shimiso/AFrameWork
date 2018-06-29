@@ -70,6 +70,10 @@
             android:id="@+id/rx_android_sample"
             android:icon="@drawable/ic_menu_save"
             android:title="@string/rx_android_sample" />
+        <item
+            android:id="@+id/greendao_sample"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/greendao_sample" />
     </group>
 
     <item android:title="Communicate">

@@ -172,6 +172,9 @@ public class MainActivity extends BaseActivity {
                 case R.id.rx_android_sample:// 自定义view例子
                     intent = new Intent(context, RxAndroidSampleActivity.class);
                     break;
+                case R.id.greendao_sample:// GreenDao例子
+                    intent = new Intent(context, GreenDaoActivity.class);
+                    break;
             }
             if (intent != null)
                 startActivity(intent);
