@@ -18,12 +18,22 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         multiDexEnabled true
-//        ndk{
-//            moduleName "myjni"//设置库(so)文件名称
-//            ldLibs "log", "z", "m"//添加系统库
-//            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"//生成3中类的.so文件
-//        }
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                //生成多个版本的so文件
+                abiFilters "arm64-v8a", "armeabi-v7a", "x86","x86_64"//生成的.so文件
+            }
+        }
     }
+
+    // 配置CMakeLists.txt路径
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt" //编译后so文件的名字
+        }
+    }
+
     // 这个配置会影响所有编译 Java 源代码的任务。
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
