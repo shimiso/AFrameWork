@@ -1,5 +1,6 @@
 package com.eshangke.framework.ui.activities;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -54,6 +55,7 @@ public class MediaRecorderActivity extends BaseActivity{
         initData();
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public void initView() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getTitle());

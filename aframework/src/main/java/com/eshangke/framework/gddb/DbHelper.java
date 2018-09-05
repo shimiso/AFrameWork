@@ -23,9 +23,9 @@ public class DbHelper {
     public DbHelper(Context context) {
 
         //初始化数据库的一些配置        第一个参数上下文， 二 ：数据库名
-        DaoMaster.DevOpenHelper user = new DaoMaster.DevOpenHelper(context, "user", null);
+        MySQLiteOpenHelper helper = new MySQLiteOpenHelper(context, "user",null);
 //        //获取数据库操作对象
-        SQLiteDatabase db = user.getWritableDatabase();
+        SQLiteDatabase db = helper.getWritableDatabase();
 //        //获取DaoMaster对象
         daoMaster = new DaoMaster(db);
 //       //获取DaoSession对象

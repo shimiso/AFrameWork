@@ -8,9 +8,11 @@ import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.identityscope.IdentityScopeType;
 import org.greenrobot.greendao.internal.DaoConfig;
 
+import com.eshangke.framework.bean.BookDetail;
 import com.eshangke.framework.bean.Hobby;
 import com.eshangke.framework.bean.User;
 
+import com.eshangke.framework.gen.BookDetailDao;
 import com.eshangke.framework.gen.HobbyDao;
 import com.eshangke.framework.gen.UserDao;
 
@@ -23,9 +25,11 @@ import com.eshangke.framework.gen.UserDao;
  */
 public class DaoSession extends AbstractDaoSession {
 
+    private final DaoConfig bookDetailDaoConfig;
     private final DaoConfig hobbyDaoConfig;
     private final DaoConfig userDaoConfig;
 
+    private final BookDetailDao bookDetailDao;
     private final HobbyDao hobbyDao;
     private final UserDao userDao;
 
@@ -33,22 +37,32 @@ public class DaoSession extends AbstractDaoSession {
             daoConfigMap) {
         super(db);
 
+        bookDetailDaoConfig = daoConfigMap.get(BookDetailDao.class).clone();
+        bookDetailDaoConfig.initIdentityScope(type);
+
         hobbyDaoConfig = daoConfigMap.get(HobbyDao.class).clone();
         hobbyDaoConfig.initIdentityScope(type);
 
         userDaoConfig = daoConfigMap.get(UserDao.class).clone();
         userDaoConfig.initIdentityScope(type);
 
+        bookDetailDao = new BookDetailDao(bookDetailDaoConfig, this);
         hobbyDao = new HobbyDao(hobbyDaoConfig, this);
         userDao = new UserDao(userDaoConfig, this);
 
+        registerDao(BookDetail.class, bookDetailDao);
         registerDao(Hobby.class, hobbyDao);
         registerDao(User.class, userDao);
     }
     
     public void clear() {
+        bookDetailDaoConfig.clearIdentityScope();
         hobbyDaoConfig.clearIdentityScope();
         userDaoConfig.clearIdentityScope();
+    }
+
+    public BookDetailDao getBookDetailDao() {
+        return bookDetailDao;
     }
 
     public HobbyDao getHobbyDao() {
