@@ -14,9 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f2ab0a4-4498-405f-a4a4-f68f404ad280" name="Default" comment="修复麦克风问题">
-      <change afterPath="$PROJECT_DIR$/aframework/build/generated/source/buildConfig/debug/com/eshangke/framework/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/presenter/BookPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/aframework/src/main/java/com/eshangke/framework/presenter/BookPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aframework/aframework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aframework/aframework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aframework/build/generated/source/buildConfig/debug/com/eshangke/framework/BuildConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +28,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="MQS0219527001617" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -75,12 +75,12 @@
     <property name="android.profiler.active" value="true" />
     <property name="android.project.structure.last.selected" value="Project" />
     <property name="android.project.structure.proportion" value="0.20875" />
-    <property name="android.sdk.path" value="$PROJECT_DIR$/../../sdk" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../android-sdk" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536132723640" />
     <property name="device.picker.selection" value="M96GBEQD223PU" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/mp3recorder/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gradle" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
@@ -582,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591954245348</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="修复麦克风问题">
+      <created>1591955195978</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1591955195978</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -610,10 +617,10 @@
     <MESSAGE value="新增nice播放器demo" />
     <MESSAGE value="新增刷新控件和相关demo" />
     <MESSAGE value="新增视频播放控件，支持锁屏，拖拽进度，亮度，全屏缩小，挪动等功能" />
-    <MESSAGE value="修复麦克风问题" />
     <MESSAGE value="修复麦克风问题&#10;将jni替换成cmake编译" />
     <MESSAGE value="升级最新的开发环境" />
-    <option name="LAST_COMMIT_MESSAGE" value="升级最新的开发环境" />
+    <MESSAGE value="修复麦克风问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复麦克风问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
