@@ -84,10 +84,13 @@ public class BooksRecyclerAdapter extends RecyclerView.Adapter<BooksRecyclerAdap
         if (null != mBooks) {
             mBooks.clear();
         }
-        animateItems = animated;
-        lastAnimatedPosition = -1;
-        mBooks.addAll(books);
-        this.notifyDataSetChanged();
+        if(books!=null){
+            animateItems = animated;
+            lastAnimatedPosition = -1;
+            mBooks.addAll(books);
+            this.notifyDataSetChanged();
+        }
+
     }
 
     /**
