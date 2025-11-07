@@ -1,9 +1,5 @@
 package com.eshangke.framework.widget;
 
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -18,6 +14,10 @@ import com.eshangke.framework.util.BitmapCompressUtil;
 import com.eshangke.framework.util.BitmapUtil;
 import com.eshangke.framework.util.SharePreferenceUtil;
 import com.isseiaoki.simplecropview.CropImageView;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * 类的说明：图片剪裁

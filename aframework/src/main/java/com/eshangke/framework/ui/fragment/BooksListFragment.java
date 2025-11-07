@@ -11,12 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.eshangke.framework.R;
-import com.eshangke.framework.event.ScrollToTopEvent;
+import com.eshangke.framework.bean.Book;
 import com.eshangke.framework.bean.Channel;
+import com.eshangke.framework.event.ScrollToTopEvent;
+import com.eshangke.framework.presenter.BookPresenter;
 import com.eshangke.framework.ui.activities.BookDetailActivity;
 import com.eshangke.framework.ui.adapter.BooksRecyclerAdapter;
-import com.eshangke.framework.bean.Book;
-import com.eshangke.framework.presenter.BookPresenter;
 import com.eshangke.framework.util.LoadViewUtil;
 import com.eshangke.framework.util.RxBus;
 import com.eshangke.framework.view.BookListView;

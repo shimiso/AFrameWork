@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.view.Window;
+
 import com.lzy.okgo.callback.BitmapCallback;
 import com.lzy.okgo.request.base.Request;
 

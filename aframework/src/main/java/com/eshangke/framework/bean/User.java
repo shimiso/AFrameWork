@@ -1,15 +1,15 @@
 package com.eshangke.framework.bean;
 
 
+import com.eshangke.framework.gen.DaoSession;
+import com.eshangke.framework.gen.HobbyDao;
+import com.eshangke.framework.gen.UserDao;
 
 import org.greenrobot.greendao.DaoException;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.ToOne;
-import com.eshangke.framework.gen.DaoSession;
-import com.eshangke.framework.gen.HobbyDao;
-import com.eshangke.framework.gen.UserDao;
 
 /**
  * Created by huochangsheng on 2018/6/20.

@@ -18,10 +18,10 @@ import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.eshangke.framework.R;
+import com.eshangke.framework.bean.Channel;
 import com.eshangke.framework.event.ChannelChangeEvent;
 import com.eshangke.framework.event.ScrollToTopEvent;
 import com.eshangke.framework.jpush.JpushActivity;
-import com.eshangke.framework.bean.Channel;
 import com.eshangke.framework.presenter.ChannelPresenter;
 import com.eshangke.framework.ui.adapter.MainPagerAdapter;
 import com.eshangke.framework.ui.fragment.BooksListFragment;
@@ -31,7 +31,6 @@ import com.eshangke.framework.widget.photoselect.PhotoSelectDialog;
 import com.handmark.pulltorefresh.samples.PullToRefreshLauncherActivity;
 import com.shims.nicevideoplayer.TinyWindowPlayActivity;
 import com.umeng.analytics.MobclickAgent;
-
 
 import java.io.File;
 import java.util.ArrayList;

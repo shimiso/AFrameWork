@@ -5,11 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
 
+import com.eshangke.framework.bean.Book;
+import com.eshangke.framework.bean.ResultData;
 import com.eshangke.framework.callback.JsonCallback;
 import com.eshangke.framework.db.DBManager;
 import com.eshangke.framework.db.SQLiteTemplate;
-import com.eshangke.framework.bean.Book;
-import com.eshangke.framework.bean.ResultData;
 import com.eshangke.framework.util.HttpUtil;
 import com.eshangke.framework.view.BookListView;
 import com.google.gson.Gson;
@@ -21,11 +21,7 @@ import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 
-import java.io.IOException;
 import java.util.List;
-
-import okhttp3.Call;
-import okhttp3.Response;
 
 
 public class BookPresenter {

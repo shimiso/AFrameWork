@@ -1,7 +1,6 @@
 package com.eshangke.framework;
 
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -27,8 +26,6 @@ public class MainApplication extends MultiDexApplication {
         x.Ext.init(this);// 初始化 xutils
         mainApplication = this;
         sAppContext = this;
-        //JPushInterface.setDebugMode(true);    // 设置开启日志,发布时请关闭日志
-        //JPushInterface.init(this);            // 初始化 JPush
     }
 
     public static Context getAppContext() {

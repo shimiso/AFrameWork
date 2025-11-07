@@ -15,14 +15,16 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.czt.mp3recorder.MP3Recorder;
 import com.eshangke.framework.R;
-import com.eshangke.framework.ui.adapter.ChatMsgViewAdapter;
 import com.eshangke.framework.bean.ChatMsgEntity;
+import com.eshangke.framework.ui.adapter.ChatMsgViewAdapter;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import com.czt.mp3recorder.MP3Recorder;
 
 /**
  * 类的说明：录音demo

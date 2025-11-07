@@ -1,14 +1,5 @@
 package com.eshangke.framework.util;
 
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -22,10 +13,13 @@ import android.graphics.RectF;
 import android.media.ExifInterface;
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.Log;
 import android.widget.ImageView;
 
-import com.bumptech.glide.load.engine.Resource;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  * 图片压缩器.

@@ -16,10 +16,6 @@ import com.umeng.analytics.MobclickAgent;
 
 import org.xutils.x;
 
-import butterknife.ButterKnife;
-import cn.jpush.android.api.JPushInterface;
-
-
 /**
  * Activity基类
  */
@@ -109,7 +105,6 @@ public class BaseActivity extends AppCompatActivity {
         super.onResume();
         //友盟页面统计：开始计时
         MobclickAgent.onResume(this);
-        JPushInterface.onResume(this);
     }
 
     @Override
@@ -117,8 +112,5 @@ public class BaseActivity extends AppCompatActivity {
         super.onPause();
         //友盟页面统计：结束计时
         MobclickAgent.onPause(this);
-        JPushInterface.onPause(this);
     }
-
-
 }

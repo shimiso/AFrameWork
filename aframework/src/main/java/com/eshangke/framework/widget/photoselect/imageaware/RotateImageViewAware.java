@@ -15,10 +15,6 @@
  *******************************************************************************/
 package com.eshangke.framework.widget.photoselect.imageaware;
 
-import java.lang.ref.Reference;
-import java.lang.ref.WeakReference;
-import java.lang.reflect.Field;
-
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.view.ViewGroup;
@@ -28,6 +24,10 @@ import com.eshangke.framework.util.BitmapUtil;
 import com.nostra13.universalimageloader.core.assist.ViewScaleType;
 import com.nostra13.universalimageloader.core.imageaware.ImageAware;
 import com.nostra13.universalimageloader.utils.L;
+
+import java.lang.ref.Reference;
+import java.lang.ref.WeakReference;
+import java.lang.reflect.Field;
 
 
 /**

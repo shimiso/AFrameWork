@@ -18,13 +18,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.eshangke.framework.R;
+import com.eshangke.framework.bean.Book;
+import com.eshangke.framework.bean.Version;
+import com.eshangke.framework.presenter.BookPresenter;
 import com.eshangke.framework.ui.adapter.BookListAdapter;
 import com.eshangke.framework.ui.adapter.BookListClassifyAdapter;
 import com.eshangke.framework.ui.adapter.BookListConstellationAdapter;
 import com.eshangke.framework.ui.adapter.BookListGirdDropDownAdapter;
-import com.eshangke.framework.bean.Book;
-import com.eshangke.framework.bean.Version;
-import com.eshangke.framework.presenter.BookPresenter;
 import com.eshangke.framework.util.LoadViewUtil;
 import com.eshangke.framework.util.ToastUtil;
 import com.eshangke.framework.widget.WrapListView;

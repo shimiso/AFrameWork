@@ -1,9 +1,9 @@
 package com.eshangke.framework.widget.photoselect.util;
 
+import android.annotation.SuppressLint;
+
 import java.io.File;
 import java.util.HashMap;
-
-import android.annotation.SuppressLint;
 
 /**    
  * 保存缩略图绝对路径

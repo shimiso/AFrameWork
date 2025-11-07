@@ -1,7 +1,5 @@
 package com.eshangke.framework.ui.adapter;
 
-import java.util.List;
-
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -14,6 +12,8 @@ import android.widget.TextView;
 
 import com.eshangke.framework.R;
 import com.eshangke.framework.bean.ChatMsgEntity;
+
+import java.util.List;
 
 public class ChatMsgViewAdapter extends BaseAdapter {
 

@@ -10,9 +10,9 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 
 import com.eshangke.framework.R;
+import com.eshangke.framework.bean.Channel;
 import com.eshangke.framework.event.ChannelChangeEvent;
 import com.eshangke.framework.event.ChannelItemMoveEvent;
-import com.eshangke.framework.bean.Channel;
 import com.eshangke.framework.presenter.ChannelPresenter;
 import com.eshangke.framework.ui.adapter.ChannelAdapter;
 import com.eshangke.framework.util.RxBus;

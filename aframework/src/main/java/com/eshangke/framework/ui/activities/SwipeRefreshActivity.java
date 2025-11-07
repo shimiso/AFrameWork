@@ -11,9 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.eshangke.framework.R;
-import com.eshangke.framework.ui.adapter.BooksRecyclerAdapter;
 import com.eshangke.framework.bean.Book;
 import com.eshangke.framework.presenter.BookPresenter;
+import com.eshangke.framework.ui.adapter.BooksRecyclerAdapter;
 import com.eshangke.framework.util.ToastUtil;
 import com.eshangke.framework.widget.ProgressView;
 import com.eshangke.framework.widget.haorefresh.HaoRecyclerView;

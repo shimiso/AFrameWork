@@ -2,9 +2,9 @@ package com.eshangke.framework.presenter;
 
 import android.content.Context;
 
+import com.eshangke.framework.bean.Channel;
 import com.eshangke.framework.db.DBManager;
 import com.eshangke.framework.db.SQLiteTemplate;
-import com.eshangke.framework.bean.Channel;
 
 import java.util.List;
 

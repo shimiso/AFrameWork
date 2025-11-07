@@ -1,8 +1,8 @@
 package com.eshangke.framework.widget.photoselect.bean;
 
-import java.util.WeakHashMap;
-
 import android.graphics.Bitmap;
+
+import java.util.WeakHashMap;
 
 public class ImageCache extends WeakHashMap<String, Bitmap> {
 

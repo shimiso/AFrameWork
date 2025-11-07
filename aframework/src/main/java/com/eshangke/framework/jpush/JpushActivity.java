@@ -20,10 +20,6 @@ import com.eshangke.framework.ui.activities.BaseActivity;
 import com.eshangke.framework.util.AndroidUtil;
 import com.eshangke.framework.util.SharePreferenceUtil;
 
-import java.util.Set;
-
-import cn.jpush.android.api.JPushInterface;
-import cn.jpush.android.api.TagAliasCallback;
 
 /**
  * 极光推送
@@ -70,8 +66,6 @@ public class JpushActivity extends BaseActivity implements OnClickListener {
             }
         });
         TextView mImei = (TextView) findViewById(R.id.tv_imei);
-        String udid = androidUtils.getImei();
-        if (null != udid) mImei.setText("IMEI: " + udid);
 
         TextView mAppKey = (TextView) findViewById(R.id.tv_appkey);
         String appKey = androidUtils.getAppKey();
@@ -82,9 +76,7 @@ public class JpushActivity extends BaseActivity implements OnClickListener {
         TextView mPackage = (TextView) findViewById(R.id.tv_package);
         mPackage.setText("PackageName: " + packageName);
 
-        String deviceId = androidUtils.getDeviceId();
         TextView mDeviceId = (TextView) findViewById(R.id.tv_device_id);
-        mDeviceId.setText("deviceId:" + deviceId);
 
         String versionName = androidUtils.getApkVersionName();
         TextView mVersion = (TextView) findViewById(R.id.tv_version);
@@ -110,25 +102,14 @@ public class JpushActivity extends BaseActivity implements OnClickListener {
                 init();
                 break;
             case R.id.stopPush://关闭jpush推送
-                JPushInterface.stopPush(getApplicationContext());
                 break;
             case R.id.resumePush://重启jpush推送
-                JPushInterface.resumePush(getApplicationContext());
                 break;
         }
     }
 
     // 初始化 JPush。如果已经初始化，但没有登录成功，则执行重新登录。
     private void init() {
-        JPushInterface.init(getApplicationContext());
-        //设置别名，便于服务端做精准推送
-        JPushInterface.setAlias(this, "shims", new TagAliasCallback() {
-
-            @Override
-            public void gotResult(int i, String s, Set<String> set) {
-
-            }
-        });
     }
 
 

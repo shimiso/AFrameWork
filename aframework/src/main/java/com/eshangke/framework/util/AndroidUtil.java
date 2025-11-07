@@ -1,5 +1,6 @@
 package com.eshangke.framework.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,8 +20,6 @@ import android.os.storage.StorageManager;
 import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
-import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
@@ -36,7 +35,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.jpush.android.api.JPushInterface;
 
 /**
  * Android的工具类
@@ -276,7 +274,7 @@ public class AndroidUtil {
      */
     public void showTips(View v, String text, Integer tipModel) {
         Snackbar snackbar = Snackbar.make(v, text, Snackbar.LENGTH_SHORT);
-        Snackbar.SnackbarLayout ve = (Snackbar.SnackbarLayout) snackbar.getView();
+        @SuppressLint("RestrictedApi") Snackbar.SnackbarLayout ve = (Snackbar.SnackbarLayout) snackbar.getView();
         switch (tipModel) {
             case TIPS_ERROR:
                 ve.setBackgroundColor(ContextCompat.getColor(context, R.color.red));
@@ -342,20 +340,6 @@ public class AndroidUtil {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
     }
 
-    /**
-     * 取得Imei
-     * @return
-     */
-    public String getImei() {
-        String imei=null;
-        try {
-            TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-            imei = telephonyManager.getDeviceId();
-        } catch (Exception e) {
-            Log.e(AndroidUtil.class.getSimpleName(), e.getMessage());
-        }
-        return imei;
-    }
 
     /**
      * 取得AppKey
@@ -381,15 +365,6 @@ public class AndroidUtil {
         return appKey;
     }
 
-    /**
-     * 取得DeviceId
-     * @return
-     */
-    public  String getDeviceId() {
-        String deviceId = JPushInterface.getUdid(context);
-
-        return deviceId;
-    }
 
     /**
      * 验证SD卡是够可用

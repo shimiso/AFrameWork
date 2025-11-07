@@ -14,9 +14,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import com.eshangke.framework.presenter.Player;
 
 import com.eshangke.framework.R;
+import com.eshangke.framework.presenter.Player;
 
 public class MediaPlayerActivity extends BaseActivity implements View.OnClickListener{
     //音量进度条

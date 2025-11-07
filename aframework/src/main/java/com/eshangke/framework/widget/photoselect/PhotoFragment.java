@@ -1,8 +1,5 @@
 package com.eshangke.framework.widget.photoselect;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,6 +17,9 @@ import com.eshangke.framework.widget.photoselect.adapter.PhotoAdapter;
 import com.eshangke.framework.widget.photoselect.bean.PhotoInfo;
 import com.eshangke.framework.widget.photoselect.bean.PhotoSerializable;
 import com.eshangke.framework.widget.photoselect.util.UniversalImageLoadTool;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 类的说明：图片列表

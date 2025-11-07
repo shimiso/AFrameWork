@@ -25,9 +25,9 @@ import android.widget.TextView;
 
 import com.eshangke.framework.MainApplication;
 import com.eshangke.framework.R;
+import com.eshangke.framework.bean.Channel;
 import com.eshangke.framework.event.ChannelItemMoveEvent;
 import com.eshangke.framework.listener.OnItemClickListener;
-import com.eshangke.framework.bean.Channel;
 import com.eshangke.framework.util.AndroidUtil;
 import com.eshangke.framework.util.RxBus;
 import com.eshangke.framework.widget.ItemDragHelperCallback;
